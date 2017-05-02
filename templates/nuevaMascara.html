@@ -1,7 +1,353 @@
-<div class="seccion-nuevaMascara" ng-controller="nuevaMascaraCtrl as vm">
+<div class="seccion-nueva-mascara" ng-controller="nuevaMascaraCtrl as vm">
   <header>
-  	<h2>Sueldo</h2>
-    <div class="opciones">Alta - sdsada - sadsa</div>
+  	<h2><span></span>Sueldo</h2>
+    <div class="opciones">
+      <div>
+        <p>Alta</p>
+        <p>27/09/2014</p>
+      </div>
+      <div>
+        <p>visibilidad</p>
+        <p class="opc-visibilidad">
+          <input type="radio" name="visibilidad" value="interna"> Interna
+          <input type="radio" name="visibilidad" value="externa"> Externa
+        </p>
+      </div>
+      <div>
+        <p>prioridad</p>
+        <p>
+          <select>
+            <option value="">Alta</option>
+            <option value="">Baja</option>
+            <option value="">Sin prioridad</option>
+          </select>
+        </p>
+      </div>
+      <div>
+        <p>Estado</p>
+        <p class="activo">Activo</p>
+      </div>
+      <div class="clear"></div>
+    </div>
   </header>
+  <div class="configuracion-mascaras">
+    <h2><span></span>Inicio :: Máscaras :: Nueva Mascara</h2>
+    <!--PRODUCTO PRINCIPAL OFERTABLE -->
+    <div class="opciones-configuracion">
+      <div><span class="config-verde"></span> 1.Producto Principal Ofertable</div>
+      <div><button class="boton-claro" ng-click="vm.abreProducto = !vm.abreProducto">Editar</button></div>
+      <div class="clear"></div>
+    </div>
+    <div class="configuracion-desplegado" ng-if="vm.abreProducto">
+      <!--BRINDAR PRODUCTO POR CUENTA-->
+      <div class="opciones-contenedora">
+        <div class="onoffswitch">
+          <input type="checkbox" name="productoCuenta" class="onoffswitch-checkbox" id="productoCuenta" checked ng-model="vm.productoCuenta">
+          <label class="onoffswitch-label" for="productoCuenta"></label>
+        </div><span>Brindar producto con cuenta</span>
+        <div ng-if="vm.productoCuenta">
+          <div class="opciones-productos">
+            <div>
+              <p>Producto</p>
+              <select>
+                <option value="">90</option>
+                <option value="">B-XXXXXXXXXXX</option>
+              </select>
+            </div>
+            <div>
+              <p>Subproducto</p>
+              <select>
+                <option value="">2001</option>
+                <option value="">B-XXXXXXXXXXX</option>
+              </select>
+            </div>
+            <div>
+              <p>Producto a ofertar</p>
+              <p>RIO PERSONAL P.A.S. 1</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <button class="boton-claro agregar-producto">+ Agregar Producto</button>
+          <!--REQUIERE CONVENIO-->
+          <div class="onoffswitch">
+              <input type="checkbox" name="productosUpgrade" class="onoffswitch-checkbox" id="productosUpgrade" checked ng-model="vm.productosUpgrade">
+              <label class="onoffswitch-label" for="productosUpgrade"></label>
+          </div><span>Requiere convenio</span>
+          <div class="opciones-productos" ng-if="vm.productosUpgrade">
+            <div class="opciones-convenio">
+              <div>
+                <p>Tipo de suscriptor</p>
+                <select>
+                  <option value="">P - Plan Sueldo</option>
+                  <option value="">B-XXXXXXXXXXX</option>
+                </select>
+                <div class="clear"></div>
+              </div>
+              <div>
+                <p>Código de convenio</p>
+                <input type="text" />
+                <div class="clear"></div>
+              </div>
+              <div>
+                <p>% Absorción</p>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="absorcion" class="onoffswitch-checkbox" id="absorcion" checked ng-model="vm.absorcion">
+                    <label class="onoffswitch-label" for="absorcion"></label>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div>
+                <p>Concepto</p>
+                <input type="text" />
+                <div class="clear"></div>
+              </div>
+              <div>
+                <p>Entidad</p>
+                <input class="input-corto" type="text" placeholder="%" />
+                <div class="clear"></div>
+              </div>
+              <div>
+                <p>Suscriptor</p>
+                <input class="input-corto" type="text" placeholder="%" />
+                <div class="clear"></div>
+              </div>
+              <div>
+                <p>Cliente</p>
+                <input class="input-corto" type="text" placeholder="%" />
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!--TARJETA CREDENCIAL-->
+      <div class="opciones-contenedora">
+        <div class="onoffswitch">
+            <input type="checkbox" name="tarjetaCredencial" class="onoffswitch-checkbox" id="tarjetaCredencial" checked ng-model="vm.tarjetaCredencial">
+            <label class="onoffswitch-label" for="tarjetaCredencial"></label>
+        </div><span>Tarjeta / Credencial</span>
+        <div class="opciones-productos" ng-if="vm.tarjetaCredencial">
+          <div class="opciones-credito">
+            <div><input type="radio" checked name="tipo-tarjeta" value="debito"> Débito</div>
+            <div><input type="radio" name="tipo-tarjeta" value="credencial"> Credencial</div>
+            <div class="opcion-con-switch">
+              <p>Imprimir</p>
+              <div>
+                <span class="opcion-no">No</span>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="imprimir" class="onoffswitch-checkbox" id="imprimir" checked ng-model="vm.imprimir">
+                    <label class="onoffswitch-label" for="imprimir"></label>
+                </div>
+                <span>Si</span>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="opcion-con-switch">
+              <p>Pedir Foto</p>
+              <div>
+                <span class="opcion-no">No</span>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="pedirFoto" class="onoffswitch-checkbox" id="pedirFoto" checked ng-model="vm.pedirFoto">
+                    <label class="onoffswitch-label" for="pedirFoto"></label>
+                </div>
+                <span>Si</span>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="radio-con-padding"><input type="radio" checked name="tipo-opcion" value="obligatorio"> Obligatorio</div>
+            <div class="radio-con-padding"><input type="radio" name="tipo-opcion" value="opcional"> Opcional</div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!--PREEVALUACIÓN-->
+      <div class="opciones-contenedora">
+        <div class="onoffswitch">
+            <input type="checkbox" name="preevaluacion" class="onoffswitch-checkbox" id="preevaluacion" checked ng-model="vm.preevaluacion">
+            <label class="onoffswitch-label" for="preevaluacion"></label>
+        </div>
+        <span>Preevaluación</span>
+      </div>
+      <hr />
+      <!--PERSONA-->
+      <div class="opciones-contenedora">
+        <div class="onoffswitch">
+            <input type="checkbox" name="persona" class="onoffswitch-checkbox" id="persona" checked ng-model="vm.persona">
+            <label class="onoffswitch-label" for="persona"></label>
+        </div>
+        <span>Persona</span>
+        <span class="aclaracion-persona" ng-if="vm.persona">Esta opción implica que se le dé de alta a la persona en el backend del Banco</span>
+      </div>
+      <hr />
+      <div class="botonera">
+        <button class="boton-rojo">Guardar y Continuar</button>
+      </div>
+    </div>
+    <div class="opciones-configuracion">
+      <div><span class="config-verde"></span> 2.Otros Productos / Upgrade</div>
+      <div><button class="boton-claro" ng-click="vm.abreUpgrade = !vm.abreUpgrade">Editar</button></div>
+      <div class="clear"></div>
+    </div>
+    <div class="configuracion-desplegado contenido-upgrade" ng-if="vm.abreUpgrade">
+      <h2>RIO PERSONAL P.A.S. 1</h2>
+      <div class="bloque-rango-capitas">
+        <p>Rango desde 0 hasta 15 cápitas</p>
+        <div>
+          <p>Código de convenio</p>
+          <input type="text" />
+          <div class="clear"></div>
+        </div>
+        <div class="titulo-porcentaje">Porcentaje de absorción</div>
+        <div class="concepto-padding">
+          <p>Concepto</p>
+          <input type="text" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Entidad</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Suscriptor</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Cliente</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="bloque-rango-capitas">
+        <p>Rango desde 16 hasta 30 cápitas</p>
+        <div>
+          <p>Código de convenio</p>
+          <input type="text" />
+          <div class="clear"></div>
+        </div>
+        <div class="titulo-porcentaje">Porcentaje de absorción</div>
+        <div class="concepto-padding">
+          <p>Concepto</p>
+          <input type="text" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Entidad</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Suscriptor</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Cliente</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="bloque-rango-capitas">
+        <p>Rango desde 31 hasta 100 cápitas</p>
+        <div>
+          <p>Código de convenio</p>
+          <input type="text" />
+          <div class="clear"></div>
+        </div>
+        <div class="titulo-porcentaje">Porcentaje de absorción</div>
+        <div class="concepto-padding">
+          <p>Concepto</p>
+          <input type="text" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Entidad</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Suscriptor</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+        <div>
+          <p>Cliente</p>
+          <input class="input-corto" type="text" placeholder="%" />
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="paginador-generico">
+        <span class="pag-anterior"></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span class="pag-siguiente"></span>
+      </div>
+      <hr />
+      <div class="botonera">
+        <button class="boton-rojo">Guardar y Continuar</button>
+      </div>
+    </div>
+    <div class="opciones-configuracion">
+      <div><span class="config-rojo"></span> 3.Configuración General</div>
+      <div></div>
+      <div class="clear"></div>
+    </div>
+    <div class="configuracion-desplegado">
+      <div class="onoffswitch">
+          <input type="checkbox" name="administrar" class="onoffswitch-checkbox" id="administrar" checked ng-model="vm.administrar">
+          <label class="onoffswitch-label" for="administrar"></label>
+      </div><span>Administrar Rol/Profesión</span>
+      <div class="opcion-desplegada">
+        <div ng-if="vm.administrar" class="administrar-desplegada">
+          <div>
+            <p>Rol</p>
+            <select>
+              <option value="">A-XXXXXXXXXXXXXX</option>
+              <option value="">B-XXXXXXXXXXX</option>
+            </select>
+            <div class="clear"></div>
+          </div>
+          <div>
+            <p>Profesión</p>
+            <select>
+              <option value="">B-XXXXXXXXXXX</option>
+              <option value="">A-XXXXXXXXXXXXXX</option>
+            </select>
+            <div class="clear"></div>
+          </div>
+          <div>
+            <p>Descripción</p>
+            <input ng-model="vm.descripcion" type="text" />
+            <span class="control-descripcion" ng-class="{'descripcion-ok':vm.descripcion.length > 0}"></span>
+            <div class="clear"></div>
+          </div>
+          <div class="contenedor-boton">
+            <button class="boton-claro">+ agregar Rol</button>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="onoffswitch">
+          <input type="checkbox" name="ventas" class="onoffswitch-checkbox" id="ventas" checked ng-model="vm.ventas">
+          <label class="onoffswitch-label" for="ventas"></label>
+      </div><span>Ventas</span>
+      <div class="opcion-desplegada">
+        <div ng-if="vm.ventas">
+          <p>Setear tiempo de vida máximo de las solicitudes asignadas a vendedores.</p>
+          <p>Vencer las solicitudes <input class="dias-solicitud" type="text" /> días luego de la asignación de la solicitud al vendedor.</p>
+        </div>
+      </div>
+      <div class="botonera">
+        <button class="boton-rojo">Guardar y Finalizar</button>
+        <button class="boton-claro">Volver</button>
+      </div>
+    </div>
+  </div>
 
 </div>

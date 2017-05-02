@@ -1,38 +1,13 @@
-app.controller("nuevaMascaraCtrl", function($scope, misLotes){
+app.controller("nuevaMascaraCtrl", function($scope){
   var vm = this;
-  vm.filtroActivo = false;
-  vm.opcionSeleccionada = -1;
-
-  //Lista de opciones del menu derecho
-  vm.sidebarMenu = misLotes.sidebarMenu();
-
-  //Datos que se van a cargar en la tabla de mascaras
-  vm.tablaMascara = misLotes.datosLotesMascaras();
-
-  //Función para abrir el menu Adicional
-  vm.abreOpciones = function(index) {
-    if (vm.opcionSeleccionada === index){
-      vm.opcionSeleccionada = -1;
-      return;
-    }
-    vm.opcionSeleccionada = index;
-  };
-
-  vm.toggleFiltro = function() {
-    vm.filtroActivo = !vm.filtroActivo;
-  };
-
-  //Función para cerrar el menu Adicional
-  // document.addEventListener("click", function (e) {
-  //   var level = 0;
-  //   for (var element = e.target; element; element = element.parentNode) {
-  //     if (element.id === 'content-area') {
-  //         console.log( "content-area clicked");
-  //       return;
-  //     }
-  //     level++;
-  //   }
-  //   vm.abreOpciones(-1);
-  // });
+  vm.abreProducto = false;
+  vm.productoCuenta = true;
+  vm.tarjetaCredencial = true;
+  vm.absorcion = true;
+  vm.imprimir = true;
+  vm.pedirFoto = true;
+  vm.productosUpgrade = true;
+  vm.preevaluacion = true;
+  vm.persona = true;
 
 });
