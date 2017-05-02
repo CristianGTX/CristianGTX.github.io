@@ -522,7 +522,7 @@ h2.titulo-seccion {
   margin-left: 10px;
 }
 
-.seccion-nueva-mascara .agregar-producto {
+.centrar-boton {
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -639,7 +639,7 @@ h2.titulo-seccion {
   width: 30px;
 }
 
-.opciones-productos {
+.opciones-productos, .opciones-upgrade {
   padding: 20px 54px;
 }
 
@@ -721,12 +721,12 @@ h2.titulo-seccion {
   color: #BBBBBB;
 }
 
-.contenido-upgrade h2 {
+.contenido-upgrade-rangos h2 {
   color: #EC0000;
   text-align: center;
 }
 
-.contenido-upgrade > div.bloque-rango-capitas {
+.contenido-upgrade-rangos > div.bloque-rango-capitas {
   float: left;
   border: solid 1px #CCCCCC;
   padding: 20px;
@@ -734,38 +734,85 @@ h2.titulo-seccion {
   margin: 20px;
 }
 
-.contenido-upgrade > div.bloque-rango-capitas > p {
+.contenido-upgrade-rangos > div.bloque-rango-capitas > p {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.contenido-upgrade > div.bloque-rango-capitas > div {
+.contenido-upgrade-rangos > div.bloque-rango-capitas > div {
   margin-top: 10px;
 }
 
-.contenido-upgrade > div.bloque-rango-capitas > div.titulo-porcentaje {
+.contenido-upgrade-rangos > div.bloque-rango-capitas > div.titulo-porcentaje {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #999999;
 }
 
-.contenido-upgrade .concepto-padding {
+.contenido-upgrade-rangos .concepto-padding {
   margin-bottom: 20px;
 }
 
-.contenido-upgrade > div.bloque-rango-capitas div > p {
+.contenido-upgrade-rangos > div.bloque-rango-capitas div > p {
   float: left;
   width: 140px;
   line-height: 18px;
 }
 
-.contenido-upgrade > div.bloque-rango-capitas div > input {
+.contenido-upgrade-rangos > div.bloque-rango-capitas div > input {
   float: left;
 }
 
-.contenido-upgrade .paginador-generico {
+.contenido-upgrade-rangos .paginador-generico {
   margin-bottom: 20px;
+}
+
+.opciones-upgrade > p {
+  margin-bottom: 20px;
+}
+
+.opciones-upgrade > div {
+  margin-bottom: 10px;
+}
+
+.contenido-convenios-especiales > div input{
+  width: 400px;
+  text-align: right;
+}
+
+.contenido-convenios-upgrades > div input{
+  width: 60px;
+}
+
+.opciones-upgrade > div input.responsable-principal {
+  margin-left: 15px;
+}
+
+.opciones-upgrade .titulos-rangos {
+  color: #999999;
+}
+
+.opciones-upgrade .fila-rangos > div {
+  float: left;
+}
+
+.opciones-upgrade .fila-rangos > div {
+  width: 80px;
+}
+
+.opciones-upgrade .fila-rangos > div > span{
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite.png);
+  background-position: -35px 3px;
+  width: 14px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.opciones-upgrade .fila-rangos > div:last-child {
+  float: none;
 }
 
 .opcion-desplegada div.administrar-desplegada p {
