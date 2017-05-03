@@ -1,0 +1,84 @@
+<div class="seccion-nuevo-suscriptor" ng-controller="nuevoSuscriptorCtrl as vm">
+  <header class="usuario">
+  	<h2>Gestión de ALFA</h2>
+    <div class="datos-usuario">
+      <span>Usuario</span>
+      <br />
+      <span>B040162</span>
+    </div>
+  </header>
+  <div class="menu-gestion">
+    <h2>Nuevo Suscriptor</h2>
+  </div>
+  <div class="contenido-nuevo-suscriptor">
+    <div class="opciones-nuevo-suscriptor">
+      <div class="numero-opcion activa">1</div>
+      <div class="contenido-opcion-suscriptor">
+        <h3>
+          <input type="checkbox" name="requiere-entidad" value="requiere" ng-model="vm.entidad" />
+          <span>Requiere Entidad</span>
+        </h3>
+        <select ng-disabled="!vm.entidad" ng-class="{'select-disabled':!vm.entidad}">
+          <option ng-selected="!vm.entidad" ng-show="!vm.entidad" value="">Selecciona Entidad</option>
+          <option ng-selected="vm.entidad" value="garbarino">Garbarino</option>
+          <option value="fravega">Fravega</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo-suscriptor">
+      <div class="numero-opcion inactiva">2</div>
+      <div class="contenido-opcion-suscriptor">
+        <h3>Seleccioná el producto</h3>
+        <ul>
+          <li ng-repeat="prod in vm.productos">
+            <label for="producto-{{prod}}">
+              <input class="radio-producto" ng-model="prod.productos" type="radio" id="producto-{{prod}}" name="producto" />{{prod}}
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo-suscriptor">
+      <div class="numero-opcion inactiva">3</div>
+      <div class="contenido-opcion-suscriptor">
+        <h3>Cantidad de Cápitas</h3>
+        <input class="input-largo" type="text" placeholder="Cantidad de cápitas a dar de alta" />
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo-suscriptor">
+      <div class="numero-opcion inactiva">4</div>
+      <div class="contenido-opcion-suscriptor">
+        <h3>Suscriptor *</h3>
+        <input class="input-largo" type="text" placeholder="Ingresá el nombre del Suscriptor" />
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo-suscriptor">
+      <div class="numero-opcion inactiva">5</div>
+      <div class="contenido-opcion-suscriptor">
+        <h3>Sucursal - Cuenta *</h3>
+        <input class="input-largo" type="text" placeholder="Ingresá una cuenta" />
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo-suscriptor">
+      <div class="numero-opcion inactiva">6</div>
+      <div class="contenido-opcion-suscriptor">
+        <h3>Domicilio *</h3>
+        <select value="Seleccionar domicilio">
+          <option value="garbarino">Seleccionar domicilio</option>
+          <option value="fravega">Rivadavia 2323</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="botonera">
+      <button class="boton-rojo">Guardar y Finalizar</button>
+      <button class="boton-claro boton-con-flechita">cancelar</button>
+      <button class="boton-claro boton-con-flechita">Volver</button>
+    </div>
+  </div>
+</div>
