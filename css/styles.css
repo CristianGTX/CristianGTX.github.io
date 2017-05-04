@@ -59,6 +59,7 @@ body > div.menu-principal ul li:nth-child(2n+1) {
 input, select {
   border: solid 1px #CCCCCC;
   border-top: solid 2px #CCCCCC;
+  padding: 2px 5px;
 }
 /* SUBMENU DE GESTIONES*/
 
@@ -543,7 +544,7 @@ h2.titulo-seccion {
 }
 
 .seccion-nueva-mascara .opciones > div p:first-child {
-  font-weight: 600;
+  font-family: 'open_sansbold';
   margin-bottom: 20px;
 }
 
@@ -621,7 +622,7 @@ h2.titulo-seccion {
 }
 
 .opcion-desplegada {
-  padding: 5px 54px;
+  padding: 0 54px;
   padding-bottom: 20px;
   border-bottom: solid 1px #CCCCCC;
   margin-bottom: 20px;
@@ -937,6 +938,93 @@ h2.titulo-seccion {
   line-height: 30px;
 }
 
+/*==ENTIDAD NEGOCIO ==*/
+
+.entidad-negocio .menu-entidad-negocio {
+  background: #EBEBEB;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.entidad-negocio .menu-entidad-negocio > div {
+  float: left;
+  margin-right: 80px;
+}
+
+.entidad-negocio .menu-entidad-negocio > div:last-child {
+  float: none;
+}
+
+.entidad-negocio .menu-entidad-negocio > div > p:first-child {
+  font-family: 'open_sansbold';
+  margin-bottom: 10px;
+}
+
+.entidad-negocio .usuario {
+  border: none;
+}
+
+.entidad-negocio .contenido-entidad-negocio {
+  padding: 30px 20px;
+}
+
+h3.titulo-con-retorno {
+  font-family: 'open_sansbold';
+  font-size: 18px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.contenido-entidad-negocio .datos-mapa {
+  float: left;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.contenido-entidad-negocio .datos-mapa label {
+  display: block;
+  font-family: 'open_sansbold';
+  margin: 10px 0;
+}
+
+.contenido-entidad-negocio .datos-mapa input {
+  display: block;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.datos-direccion > div {
+  float: left;
+  margin-right: 10px;
+}
+
+.contenido-entidad-negocio .datos-mapa .datos-direccion > div input {
+  width: 40px
+}
+
+.contenido-entidad-negocio .datos-mapa .datos-direccion > div:first-child input {
+  width: 74px
+}
+
+.datos-mapa button {
+  width: 210px;
+  margin-top: 54px;
+}
+
+.datos-direccion > div:last-child {
+  float: none;
+}
+
+.contenido-entidad-negocio .muestra-mapa {
+  float: left;
+  margin-top: 20px;
+}
+
+.contenido-entidad-negocio .botonera {
+  margin-top: 20px;
+}
+
 /* ===SWITCH=== */
 .onoffswitch {position: relative; margin-right: 10px; width: 40px;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;display: inline-block;}
 .onoffswitch+span{display: inline-block;vertical-align: top;margin: 3px;font-family: 'open_sanssemibold';font-size: 13px}
@@ -993,6 +1081,17 @@ h2.titulo-seccion {
 
 .boton-claro:hover {
   opacity: 0.85;
+}
+
+.boton-rojo-solo {
+  background: url(../img/bg_btn_01.png);
+  color: #FFFFFF;
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  border: solid 1px #EC0000;
 }
 
 .boton-rojo {

@@ -29,6 +29,10 @@ app.config(function($routeProvider,$locationProvider){
 				templateUrl: "templates/nuevoSuscriptor.html",
 				controller: "nuevoSuscriptorCtrl as vm"
 			})
+			.when("/entidadNegocio", {
+				templateUrl: "templates/entidadNegocio.html",
+				controller: "entidadNegocioCtrl as vm"
+			})
       .otherwise({
         redirectTo: '/'
     });
