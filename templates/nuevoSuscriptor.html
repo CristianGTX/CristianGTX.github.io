@@ -1,14 +1,19 @@
 <div class="seccion-nuevo-suscriptor" ng-controller="nuevoSuscriptorCtrl as vm">
-  <header class="usuario">
-  	<h2>Gestión de ALFA</h2>
-    <div class="datos-usuario">
-      <span>Usuario</span>
-      <br />
-      <span>B040162</span>
+  <div class="contenedor-header">
+    <div class="contenedor-header">
+      <header class="usuario">
+      	<h2>Gestión de ALFA</h2>
+        <div class="datos-usuario">
+          <span>Usuario</span>
+          <br />
+          <span>B040162</span>
+        </div>
+        <div class="clear"></div>
+      </header>
     </div>
-  </header>
-  <div class="menu-gestion">
-    <h2>Nuevo Suscriptor</h2>
+    <div class="menu-gestion">
+      <h2>Nuevo Suscriptor</h2>
+    </div>
   </div>
   <div class="contenido-nuevo-suscriptor">
     <div class="opciones-nuevo-suscriptor">
@@ -68,10 +73,13 @@
       <div class="numero-opcion inactiva">6</div>
       <div class="contenido-opcion-suscriptor">
         <h3>Domicilio *</h3>
-        <select value="Seleccionar domicilio">
-          <option value="garbarino">Seleccionar domicilio</option>
-          <option value="fravega">Rivadavia 2323</option>
-        </select>
+        <div class="select-domicilio" id="domicilio">
+          <span ng-click="vm.abreSelectorDomicilio = !vm.abreSelectorDomicilio">Seleccionar domicilio</span>
+          <span ng-click="vm.abreSelectorDomicilio = !vm.abreSelectorDomicilio"></span>
+          <div class="opciones-select-domicilio" ng-show="vm.abreSelectorDomicilio">
+            <span> <a href="#/entidadNegocio">Nuevo domicilio ></a></span>
+          </div>
+        </div>
       </div>
       <div class="clear"></div>
     </div>

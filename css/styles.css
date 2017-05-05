@@ -19,40 +19,48 @@ body {
 }
 
 /* ===HEADER=== */
-body > div.menu-principal {
-  display: flex;
+
+body > .contenedor-menu-principal {
+  background: #EC0000;
+}
+
+body div.menu-principal {
+  width: 984px;
+  margin: auto;
   background: #EC0000;
   color: #FFFFFF;
   padding: 10px;
   line-height: 26px;
 }
 
-body > div.menu-principal > div.logo {
+body div.menu-principal > div.logo {
+  float: left;
   text-align: left;
   width: 139px;
   height: 20px;
   background: url(../img/logo-santander-chico.png);
 }
 
-body > div.menu-principal > div:last-child {
+body div.menu-principal > div.lista-opciones-menu {
+  float: left;
   text-align: left;
   padding-left: 50px;
   line-height: 26px;
 }
 
-body > div.menu-principal ul {
+body div.menu-principal ul {
   margin: 0;
   padding: 0;
 }
 
-body > div.menu-principal ul li {
+body div.menu-principal ul li {
   display: inline;
   padding: 0;
   margin: 0 1px;
   cursor: default;
 }
 
-body > div.menu-principal ul li:nth-child(2n+1) {
+body div.menu-principal ul li:nth-child(2n+1) {
   cursor: pointer;
 }
 
@@ -63,11 +71,17 @@ input, select {
 }
 /* SUBMENU DE GESTIONES*/
 
+.contenedor-menu-gestion {
+  background: #EBEBEB;
+  border-bottom: solid 1px #CCCCCC;
+}
+
 .menu-gestion {
   background: #EBEBEB;
   padding: 0;
-  border-bottom: solid 1px #CCCCCC;
   margin-bottom: 40px;
+  width: 1024px;
+  margin: auto;
 }
 
 .menu-gestion > h2{
@@ -130,14 +144,20 @@ input, select {
 
 /* ===MENU DE USUARIO=== */
 
- header.usuario {
-  display: flex;
-  padding: 20px;
+.contenedor-header {
   background: #EBEBEB;
   border-bottom: solid 1px #CCCCCC;
 }
 
+ header.usuario {
+  width: 984px;
+  margin: auto;
+  padding: 20px;
+  background: #EBEBEB;
+}
+
 header.usuario h2 {
+  float: left;
   text-align: left;
   width: 50%;
   margin: 0;
@@ -147,6 +167,7 @@ header.usuario h2 {
 }
 
 header.usuario div.datos-usuario {
+  float: right;
   text-align: right;
   width: 50%;
   font-weight: 600;
@@ -164,7 +185,8 @@ header.usuario div.datos-usuario > span:last-child {
 /* ===ESTRUCTURA MASCARAS / SUSCRIPTORES=== */
 
 .estructura-menu-contenido {
-  display: flex;
+  width: 1024px;
+  margin: auto;
 }
 
 .estructura-menu-contenido > div{
@@ -172,11 +194,13 @@ header.usuario div.datos-usuario > span:last-child {
 }
 
 .contenido-menu {
+  float: left;
   width: 200px;
 }
 
-.contenido-mascaras {
-  width: 100%;
+.contenido-derecho {
+  float: left;
+  width: 740px;
 }
 
 /* ===SIDEBAR IZQUIERDO=== */
@@ -216,12 +240,12 @@ header.usuario div.datos-usuario > span:last-child {
 /* ===CONTENIDO DE FILTROS=== */
 
 .panel-filtros-generico {
-  display: flex;
   line-height: 30px;
   height: 30px;
 }
 
 h2.titulo-seccion {
+  float: left;
   text-align: left;
   width: 50%;
   color: #EC0000;
@@ -233,6 +257,7 @@ h2.titulo-seccion {
 }
 
 .filtro {
+  float: right;
   width: 50%;
   text-align: right;
 }
@@ -272,6 +297,7 @@ h2.titulo-seccion {
   background: #EBEBEB;
   margin-bottom: 10px;
   padding: 20px;
+  padding-top: 0;
   border-radius: 5px;
   position: relative;
 }
@@ -304,6 +330,7 @@ h2.titulo-seccion {
 .panel-filtros .filtro-interno {
   float: left;
   margin-right: 20px;
+  padding-top: 20px;
 }
 
 .clear {
@@ -489,10 +516,16 @@ h2.titulo-seccion {
   font-family: 'open_sanssemibold';
 }
 
-.seccion-nueva-mascara header{
-  padding: 20px;
+.seccion-nueva-mascara .contenedor-header {
   background: #EBEBEB;
   border-bottom: solid 1px #CCCCCC;
+}
+
+.seccion-nueva-mascara header{
+  width: 984px;
+  margin: auto;
+  padding: 20px;
+  background: #EBEBEB;
 }
 
 .seccion-nueva-mascara header h2{
@@ -550,6 +583,8 @@ h2.titulo-seccion {
 
 .configuracion-mascaras {
   padding: 40px 20px;
+  width: 984px;
+  margin: auto;
 }
 
 .configuracion-mascaras h2 {
@@ -785,13 +820,18 @@ h2.titulo-seccion {
 
 .contenedor-productos {
   max-height: 210px;
-  width: 900px;
+  width: 786px;
   overflow-y: auto;
-  margin: 30px 20px 30px 56px;
+  margin: 30px 0 30px 56px;
 }
 
 .contenedor-productos .fila-rangos > div {
   width: 200px;
+  margin-bottom: 10px;
+}
+
+.contenedor-productos .fila-rangos > div:nth-last-child(2) {
+  width: 40px;
   margin-bottom: 10px;
 }
 
@@ -867,11 +907,18 @@ h2.titulo-seccion {
 
 .seccion-nuevo-suscriptor .menu-gestion {
   margin-bottom: 0;
-  font-family: 'open_sansbold';
+  font-weight: 600;
+}
+
+.seccion-nuevo-suscriptor .contenedor-header {
+  background: #EBEBEB;
+  border-bottom: solid 1px #CCCCCC;
 }
 
 .contenido-nuevo-suscriptor {
   padding: 20px;
+  width: 984px;
+  margin: auto;
 }
 
 .contenido-nuevo-suscriptor select {
@@ -932,6 +979,61 @@ h2.titulo-seccion {
   text-align: left;
 }
 
+.opciones-nuevo-suscriptor .select-domicilio {
+  position: relative;
+  width: 500px;
+  font-family: 'open_sansregular';
+  font-size: 12px;
+  border: solid 1px #CCCCCC;
+  border-top: solid 2px #CCCCCC;
+  padding: 2px 5px;
+  margin-top: 10px;
+}
+
+.opciones-nuevo-suscriptor .select-domicilio .opciones-select-domicilio {
+  position: absolute;
+  left: -1px;
+  top: 16px;
+  width: 510px;
+  background: #FFFFFF;
+  border: solid 1px #CCCCCC;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.opciones-nuevo-suscriptor .select-domicilio .opciones-select-domicilio > span a {
+  display: block;
+  color: #EC0000;
+  width: 100%;
+  padding: 20px 10px;
+  font-family: 'open_sanssemibold';
+}
+
+.opciones-nuevo-suscriptor .select-domicilio .opciones-select-domicilio > span a:hover {
+  opacity: 1;
+}
+
+
+
+.opciones-nuevo-suscriptor .select-domicilio > span {
+    display: inline-block;
+    cursor: pointer;
+    width: 482px;
+}
+
+.opciones-nuevo-suscriptor .select-domicilio > span:nth-child(2) {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite-2.png);
+  background-position: 25px 14px;
+  width: 12px;
+  height: 11px;
+  margin-left: 6px;
+  margin-top: 2px;
+  float: right;
+  cursor: pointer;
+}
+
 .contenido-opcion-suscriptor > h3 {
   font-family: 'open_sansbold';
   font-size: 14px;
@@ -941,6 +1043,8 @@ h2.titulo-seccion {
 /*==ENTIDAD NEGOCIO ==*/
 
 .entidad-negocio .menu-entidad-negocio {
+  width: 984px;
+  margin: auto;
   background: #EBEBEB;
   padding: 20px;
   padding-bottom: 30px;
@@ -967,6 +1071,8 @@ h2.titulo-seccion {
 
 .entidad-negocio .contenido-entidad-negocio {
   padding: 30px 20px;
+  width: 984px;
+  margin: auto;
 }
 
 h3.titulo-con-retorno {

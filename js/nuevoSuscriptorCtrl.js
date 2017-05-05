@@ -1,5 +1,6 @@
 app.controller("nuevoSuscriptorCtrl", function($scope){
   var vm = this;
+  vm.abreSelectorDomicilio = false;
 
   // Listado de productos
   vm.productos = [

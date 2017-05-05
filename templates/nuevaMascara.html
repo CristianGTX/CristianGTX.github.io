@@ -1,5 +1,6 @@
 <div class="seccion-nueva-mascara" ng-controller="nuevaMascaraCtrl as vm">
-  <header>
+  <div class="contenedor-header">
+    <header>
   	<h2><span></span>Sueldo</h2>
     <div class="opciones">
       <div>
@@ -30,6 +31,7 @@
       <div class="clear"></div>
     </div>
   </header>
+  </div>
   <div class="configuracion-mascaras">
     <h2><span></span>Inicio :: Máscaras :: Nueva Mascara</h2>
     <!--PRODUCTO PRINCIPAL OFERTABLE -->
@@ -210,163 +212,165 @@
           <label class="onoffswitch-label" for="conveniosUpgrades"></label>
         </div><span>Agregar convenio/s con upgrade</span>
         <!--CONVENIOS UPGRADE-->
-        <div class="contenido-convenios-upgrades opciones-upgrade" ng-if="vm.conveniosUpgrades">
-          <p>Rangos de cápitas</p>
-          <div class="fila-rangos titulos-rangos">
-            <div>Desde</div>
-            <div>Hasta</div>
-            <div></div>
-            <div class="clear"></div>
+        <div ng-if="vm.conveniosUpgrades">
+          <div class="contenido-convenios-upgrades opciones-upgrade">
+            <p>Rangos de cápitas</p>
+            <div class="fila-rangos titulos-rangos">
+              <div>Desde</div>
+              <div>Hasta</div>
+              <div></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div><input type="text" value="0" /></div>
+              <div><input type="text" value="15" /></div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div><input type="text" value="16" /></div>
+              <div><input type="text" value="30" /></div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div><input type="text" value="31" /></div>
+              <div><input type="text" value="100" /></div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
           </div>
-          <div class="fila-rangos">
-            <div><input type="text" value="0" /></div>
-            <div><input type="text" value="15" /></div>
-            <div><span></span></div>
-            <div class="clear"></div>
+          <button class="boton-claro centrar-boton" ng-click="vm.abreRangoCapitas()">+ Agregar Rango</button>
+          <div class="contenedor-productos">
+            <div class="fila-rangos">
+              <div>Producto</div>
+              <div>Subproducto</div>
+              <div>Producto a ofertar</div>
+              <div></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
+            <div class="fila-rangos">
+              <div>
+                <select>
+                  <option value="">90</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>
+                <select>
+                  <option value="">2001</option>
+                  <option value="">2001</option>
+                </select>
+              </div>
+              <div>RIO PERSONAL P.A.S. 1</div>
+              <div><span></span></div>
+              <div class="clear"></div>
+            </div>
           </div>
-          <div class="fila-rangos">
-            <div><input type="text" value="16" /></div>
-            <div><input type="text" value="30" /></div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div><input type="text" value="31" /></div>
-            <div><input type="text" value="100" /></div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
+          <button class="boton-claro centrar-boton">+ Agregar Producto</button>
         </div>
-        <button class="boton-claro centrar-boton" ng-click="vm.abreRangoCapitas()">+ Agregar Rango</button>
-        <div class="contenedor-productos">
-          <div class="fila-rangos">
-            <div>Producto</div>
-            <div>Subproducto</div>
-            <div>Producto a ofertar</div>
-            <div></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-          <div class="fila-rangos">
-            <div>
-              <select>
-                <option value="">90</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>
-              <select>
-                <option value="">2001</option>
-                <option value="">2001</option>
-              </select>
-            </div>
-            <div>RIO PERSONAL P.A.S. 1</div>
-            <div><span></span></div>
-            <div class="clear"></div>
-          </div>
-        </div>
-        <button class="boton-claro centrar-boton">+ Agregar Producto</button>
       </div>
       <hr />
       <div class="botonera">
