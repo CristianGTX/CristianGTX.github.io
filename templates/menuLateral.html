@@ -1,0 +1,6 @@
+<!--Menu lateral Izquierdo-->
+<div class="sidebar-izquierdo" ng-controller="menuLateralCtrl as vm">
+	<ul>
+		<li href="lista.link" ng-class="{'item-seleccionado':$index === vm.seleccionado}" ng-repeat="lista in vm.sidebarMenu"><a ng-href="{{lista.link}}">{{lista.titulo}}({{lista.cantidad}})</a></li>
+	</ul>
+</div>

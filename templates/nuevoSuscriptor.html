@@ -1,24 +1,17 @@
 <div class="seccion-nuevo-suscriptor" ng-controller="nuevoSuscriptorCtrl as vm">
   <div class="contenedor-header">
+    <!--Menu de usuario-->
     <div class="contenedor-header">
-      <header class="usuario">
-      	<h2>Gestión de ALFA</h2>
-        <div class="datos-usuario">
-          <span>Usuario</span>
-          <br />
-          <span>B040162</span>
-        </div>
-        <div class="clear"></div>
-      </header>
+      <div menu-usuario></div>
     </div>
     <div class="menu-gestion">
       <h2>Nuevo Suscriptor</h2>
     </div>
   </div>
-  <div class="contenido-nuevo-suscriptor">
-    <div class="opciones-nuevo-suscriptor">
+  <div class="contenido-nuevo">
+    <div class="opciones-nuevo">
       <div class="numero-opcion activa">1</div>
-      <div class="contenido-opcion-suscriptor">
+      <div class="contenido-opcion">
         <h3>
           <input type="checkbox" name="requiere-entidad" value="requiere" ng-model="vm.entidad" />
           <span>Requiere Entidad</span>
@@ -31,9 +24,9 @@
       </div>
       <div class="clear"></div>
     </div>
-    <div class="opciones-nuevo-suscriptor">
+    <div class="opciones-nuevo">
       <div class="numero-opcion inactiva">2</div>
-      <div class="contenido-opcion-suscriptor">
+      <div class="contenido-opcion">
         <h3>Seleccioná el producto</h3>
         <ul>
           <li ng-repeat="prod in vm.productos">
@@ -45,33 +38,33 @@
       </div>
       <div class="clear"></div>
     </div>
-    <div class="opciones-nuevo-suscriptor">
+    <div class="opciones-nuevo">
       <div class="numero-opcion inactiva">3</div>
-      <div class="contenido-opcion-suscriptor">
+      <div class="contenido-opcion">
         <h3>Cantidad de Cápitas</h3>
         <input class="input-largo" type="text" placeholder="Cantidad de cápitas a dar de alta" />
       </div>
       <div class="clear"></div>
     </div>
-    <div class="opciones-nuevo-suscriptor">
+    <div class="opciones-nuevo">
       <div class="numero-opcion inactiva">4</div>
-      <div class="contenido-opcion-suscriptor">
+      <div class="contenido-opcion">
         <h3>Suscriptor *</h3>
         <input class="input-largo" type="text" placeholder="Ingresá el nombre del Suscriptor" />
       </div>
       <div class="clear"></div>
     </div>
-    <div class="opciones-nuevo-suscriptor">
+    <div class="opciones-nuevo">
       <div class="numero-opcion inactiva">5</div>
-      <div class="contenido-opcion-suscriptor">
+      <div class="contenido-opcion">
         <h3>Sucursal - Cuenta *</h3>
         <input class="input-largo" type="text" placeholder="Ingresá una cuenta" />
       </div>
       <div class="clear"></div>
     </div>
-    <div class="opciones-nuevo-suscriptor">
+    <div class="opciones-nuevo">
       <div class="numero-opcion inactiva">6</div>
-      <div class="contenido-opcion-suscriptor">
+      <div class="contenido-opcion">
         <h3>Domicilio *</h3>
         <div class="select-domicilio" id="domicilio">
           <span ng-click="vm.abreSelectorDomicilio = !vm.abreSelectorDomicilio">Seleccionar domicilio</span>

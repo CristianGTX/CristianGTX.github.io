@@ -1,0 +1,149 @@
+<div class="seccion-suscriptores-detalle" ng-controller="suscriptoresDetallesCtrl as vm">
+  <div class="contenedor-header">
+    <header>
+      <div><input class="input-largo" type="text" placeholder="Ministrerio de Relaciones Interiores y Culto(467)" /></div>
+      <div class="sub-opciones">
+        <span class="boton-tres-puntitos" ng-click="vm.abreOpciones($index)"></span>
+        <div class="menu-adicional" ng-if="vm.opcionSeleccionada === $index">
+          <ul>
+            <li>Nuevo archivo</li>
+            <li>Inhabilitar</li>
+            <li>Exportar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </header>
+    <div class="datos-header">
+      <div class="opciones">
+        <div>
+          <p>Alta</p>
+          <p>27/09/2014</p>
+        </div>
+        <div>
+          <p>Baja</p>
+          <p>-</p>
+        </div>
+        <div>
+          <p>Domicilio de entrega</p>
+          <p>
+            <input type="text" value="Av.Roque Saenz Peña 650, P2, (CP 1242)" />
+          </p>
+        </div>
+        <div>
+          <p>Estado</p>
+          <p class="activo">Activo</p>
+        </div>
+        <div>
+          <p>Asignado</p>
+          <p>Máscara</p>
+        </div>
+        <div>
+          <p>Cantidad Cápitas</p>
+          <p>30</p>
+        </div>
+        <div>
+          <p>Negocio</p>
+          <p>ANSES</p>
+        </div>
+        <div ng-if="vm.conEntidad">
+          <p>Entidad</p>
+          <p>ANSES</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="contenido-detalle">
+    <h2 class="titulo-contenido left"><span></span>Inicio :: Suscriptores :: Ministerio de Relaciones Interiores y Culto</h2>
+    <div class="right">
+      <span class="opcion-no">Lectura</span>
+      <div class="onoffswitch">
+          <input type="checkbox" name="lecturaEdicion" class="onoffswitch-checkbox" id="lecturaEdicion" checked ng-model="vm.lecturaEdicion">
+          <label class="onoffswitch-label" for="lecturaEdicion"></label>
+      </div>
+      <span>Edición</span>
+    </div>
+    <div class="clear"></div>
+    <div class="contenedor-detalle">
+      <h2>Campos asignados a máscaras(2)</h2>
+      <div class="listado-campos-asignados">
+        <p>Valor por defecto</p>
+        <div ng-if="!vm.lecturaEdicion" class="tapa-deshabilita"></div>
+        <div class="contenedor-tabla">
+          <table>
+            <tr ng-repeat="datos in vm.listaCamposAsignados">
+              <td ng-bind="datos.titulo"></td>
+              <td>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="{{datos.id}}" class="onoffswitch-checkbox" id="{{datos.id}}" checked ng-model="datos.activo">
+                  <label class="onoffswitch-label" for="{{datos.id}}"></label>
+                </div><span ng-bind="datos.activo ? 'Visible':'No Visible'"></span>
+              </td>
+              <td class="input-check"><input type="checkbox" name="obligatorio-{{datos.id}}" value="obligatorio-{{datos.id}}" ng-model="datos.obligatorio" />obligatorio</td>
+              <td><input id="campo-{{datos.id}}" type="text" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="paginador-generico">
+        <span class="pag-anterior"></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="pag-siguiente"></span>
+      </div>
+    </div>
+  </div>
+  <div class="contenido-detalle">
+    <div class="contenedor-detalle">
+      <h2>Configuración general</h2>
+      <div class="listado-campos-asignados configuracion-general">
+        <div ng-if="!vm.lecturaEdicion" class="bloquea-detalle"></div>
+        <h2>Convenio: XXXX</h2>
+        <div>
+          <span>Sucursal de radicación por defecto</span>
+          <select ng-disabled="!vm.lecturaEdicion" ng-class="{'select-disabled':!vm.lecturaEdicion}">
+            <option value="">025 - Mataderos</option>
+            <option value="">027 - Flores</option>
+            <option value="">029 - Caballito</option>
+          </select>
+        </div>
+        <div><input type="checkbox" name="sucursal-radicacion" value="verificar" />Verificar la sucursal de radicación</div>
+        <div class="fin-linea"><input type="checkbox" name="sucursal-radicacion" value="permitir" />Permitir cambiar la sucursal de radicación</div>
+        <h2>Tipo de domicilio de entrega</h2>
+        <div class="botonera-domicilio-entrega">
+          <div class="boton-radio" ng-click="vm.seleccionEntrega('suscriptor')">
+            <input type="radio" ng-model="vm.domicilioEntrega" name="domicilioEntrega" value="suscriptor" ng-checked="vm.suscriptor" />
+            <span>Suscriptor</span>
+          </div>
+          <div class="boton-radio" ng-click="vm.seleccionEntrega('interno')">
+            <input type="radio" ng-model="vm.domicilioEntrega" name="domicilioEntrega" value="interno" ng-checked="vm.interno" />
+            <span>Interno</span>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div><input type="radio" name="entrega" /><span>Persona</span></div>
+        <div><input type="radio" name="entrega" /><span>Suscriptor</span></div>
+        <div><input type="radio" name="entrega" /><span>Andreani</span></div>
+        <div><input type="radio" name="entrega" /><span>Sucursal</span></div>
+        <div><input type="radio" name="entrega" /><span>Áreas centralizadas</span></div>
+        <div>
+          <input type="text" ng-disabled="!vm.lecturaEdicion" ng-class="{'select-disabled':!vm.lecturaEdicion}" value="Aguirre 540, CABA" />
+          <a href="#/entidadNegocio"><span class="busca-mapa"></span></a>
+        </div>
+        <div class="fin-linea"><input type="checkbox" name="domicilio" value="modificarDomicilio" />Permitir cambiar domicilio de entrega</div>
+        <div><input type="checkbox" name="sucursal-radicacion" value="verificar" />Autorizar solicitudes</div>
+        <div><input type="checkbox" name="sucursal-radicacion" value="verificar" />Realizar rescate para FFVV</div>
+        <div><input type="checkbox" name="sucursal-radicacion" value="verificar" />Imprimir tarjeta</div>
+        <div class="fin-linea"><input type="checkbox" name="sucursal-radicacion" value="verificar" />Permitir autogestión</div>
+        <div>CAF<input class="input-final" type="text" ng-disabled="!vm.lecturaEdicion" ng-class="{'select-disabled':!vm.lecturaEdicion}" placeholder="Ingresá o buscá CAF" /></div>
+      </div>
+    </div>
+    <div class="botonera">
+      <button class="boton-rojo">Guardar cambios</button>
+      <button class="boton-claro boton-con-flechita">cancelar</button>
+    </div>
+  </div>
+
+</div>

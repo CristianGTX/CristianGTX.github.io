@@ -6,7 +6,7 @@ app.controller("suscriptoresCtrl", function($scope, misLotes){
   //Lista de opciones del menu derecho
   vm.sidebarMenu = misLotes.sidebarMenu();
 
-  //Datos que se van a cargar en la tabla de mascaras
+  //Datos que se van a cargar en la tabla de Suscriptores
   vm.tablaSuscriptores = misLotes.datosLotesSuscriptores();
 
   //Función para abrir el menu Adicional

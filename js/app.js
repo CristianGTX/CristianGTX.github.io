@@ -29,9 +29,21 @@ app.config(function($routeProvider,$locationProvider){
 				templateUrl: "templates/nuevoSuscriptor.html",
 				controller: "nuevoSuscriptorCtrl as vm"
 			})
+			.when("/suscriptoresDetalles", {
+				templateUrl: "templates/suscriptoresDetalles.html",
+				controller: "suscriptoresDetallesCtrl as vm"
+			})
+			.when("/entidades", {
+				templateUrl: "templates/entidades.html",
+				controller: "entidadesCtrl as vm"
+			})
 			.when("/entidadNegocio", {
 				templateUrl: "templates/entidadNegocio.html",
 				controller: "entidadNegocioCtrl as vm"
+			})
+			.when("/nuevoNegocio", {
+				templateUrl: "templates/nuevoNegocio.html",
+				controller: "nuevoNegocioCtrl as vm"
 			})
       .otherwise({
         redirectTo: '/'

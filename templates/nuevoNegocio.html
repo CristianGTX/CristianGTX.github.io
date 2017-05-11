@@ -1,0 +1,86 @@
+<div class="seccion-nuevo-negocio" ng-controller="nuevoNegocioCtrl as vm">
+  <div class="contenedor-header">
+    <!--Menu de usuario-->
+    <div class="contenedor-header">
+      <div menu-usuario></div>
+    </div>
+    <div class="menu-gestion">
+      <h2 class="left">Nuevo Negocio</h2>
+      <div class="conteo-pasos">Paso 1 de 3</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="contenido-nuevo">
+    <h2 class="titulo-contenido"><span></span>Administración :: Nuevo negocio</h2>
+    <div class="opciones-nuevo">
+      <div class="numero-opcion activa">1</div>
+      <div class="contenido-opcion">
+        <h3>Nombre del negocio*</h3>
+        <input class="input-largo" type="text" placeholder="Ingresá el nombre del negocio" />
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo">
+      <div class="numero-opcion inactiva">2</div>
+      <div class="contenido-opcion">
+        <h3>Máscara*</h3>
+        <ul>
+          <li ng-repeat="mascara in vm.mascaras">
+            <label for="producto-{{mascara}}">
+              <input class="check-producto" type="checkbox" name="{{mascara}}" />{{mascara}}
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="opciones-nuevo">
+      <div class="numero-opcion inactiva">3</div>
+      <div class="contenido-opcion">
+        <h3>Tipo de domicilio de entrega</h3>
+        <div class="botonera-domicilio-entrega">
+          <div class="boton-radio" ng-click="vm.seleccionEntrega('suscriptor')">
+            <input type="radio" ng-model="vm.domicilioEntrega" name="domicilioEntrega" value="suscriptor" ng-checked="vm.suscriptor" />
+            <span>Suscriptor</span>
+          </div>
+          <div class="boton-radio" ng-click="vm.seleccionEntrega('interno')">
+            <input type="radio" ng-model="vm.domicilioEntrega" name="domicilioEntrega" value="interno" ng-checked="vm.interno" />
+            <span>Interno</span>
+          </div>
+          <div class="clear"></div>
+          <div class="datos-domicilio-entrega">
+            <div><input type="radio" name="entrega" /><span>Persona</span></div>
+            <div><input type="radio" name="entrega" /><span>Suscriptor</span></div>
+            <div><input type="radio" name="entrega" /><span>Andreani</span></div>
+            <div><input type="radio" name="entrega" /><span>Sucursal</span></div>
+            <div><input type="radio" name="entrega" /><span>Áreas centralizadas</span></div>
+            <div>
+              <input class="input-largo" type="text" value="Aguirre 540, CABA" />
+              <a href="#/entidadNegocio"><span class="busca-mapa"></span></a>
+            </div>
+            <div class="fin-linea"><input type="checkbox" name="domicilio" value="modificarDomicilio" />Permitir cambiar domicilio de entrega</div>
+            <div class="ajusta-top"><input type="checkbox" name="autorizar" value="Autorizar" />Autorizar solicitudes</div>
+            <div class="contenido-autorizar-solicitudes">
+              <div><input type="radio" name="cambiar" /><span>Permitir cambiar</span></div>
+              <div><input type="radio" name="cambiar" /><span>No permitir cambiar</span></div>
+            </div>
+            <div><input type="checkbox" name="rescate" value="rescate" />Realizar rescate para FFVV</div>
+            <div class="fin-linea"><input type="checkbox" name="Imprimir" value="Imprimir" />Imprimir tarjeta</div>
+            <div class="fin-linea ajusta-top"><input type="checkbox" name="autogestion" value="autogestion" />Autogestión</div>
+            <div class="ajusta-top">Sucursal de radicación</div>
+            <div><input class="input-domicilio" type="text" value="OBELISCO Av.Corrientes XXXX" /><span class="link-cambia-sucursal">Cambiar Sucursal ></span></div>
+            <div><input type="checkbox" name="sucursal" value="verificar" />Verificar sucursal de radicación</div>
+            <div class="fin-linea"><input type="checkbox" name="permitir" value="permitir" />Permitir cambiar sucursal</div>
+            <div class="ajusta-top">CAF<input class="input-final input-domicilio" type="text" placeholder="Ingresá o buscá CAF" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="botonera">
+      <button class="boton-rojo">Continuar</button>
+      <button class="boton-claro boton-con-flechita">cancelar</button>
+      <button class="boton-claro boton-con-flechita">Volver</button>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,9 @@
 @import url(reset.css);
 @import url(normalize.css);
 @import url(fonts.css);
+@import url(menuLateral.css);
+@import url(menuGestion.css);
+@import url(menuUsuario.css);
 
 /* ===CONTENIDO=== */
 body {
@@ -64,125 +67,28 @@ body div.menu-principal ul li:nth-child(2n+1) {
   cursor: pointer;
 }
 
-input, select {
+input[type="text"], select {
   border: solid 1px #CCCCCC;
   border-top: solid 2px #CCCCCC;
   padding: 2px 5px;
 }
-/* SUBMENU DE GESTIONES*/
 
-.contenedor-menu-gestion {
-  background: #EBEBEB;
-  border-bottom: solid 1px #CCCCCC;
-}
-
-.menu-gestion {
-  background: #EBEBEB;
-  padding: 0;
-  margin-bottom: 40px;
-  width: 1024px;
-  margin: auto;
-}
-
-.menu-gestion > h2{
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.menu-gestion ul {
-  margin: 0;
-  padding: 0;
-  height: 50px;
-}
-
-.menu-gestion ul li {
-  float: left;
-  list-style: none;
-  line-height: 50px;
-  padding: 0 20px;
-  margin: 0;
-  font-weight: 600;
-  border-right: solid 1px #CCCCCC;
-  cursor: pointer;
-}
-
-.menu-gestion ul li:hover {
-  background-color: #6F6F6F;
-	color: #FFFFFF;
-}
-
-.menu-gestion ul li > span {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  width: 19px;
-  height: 21px;
-  background-image: url(../img/sprite-2.png);
-}
-
-.menu-gestion ul .boton-administracion span{
-	background-position: 42px 0;
-}
-
-.menu-gestion ul .boton-administracion:hover > span{
-	background-position: 42px 45px;
-}
-
-.menu-gestion ul .boton-reportes span{
-	background-position: 0 0;
-}
-.menu-gestion ul .boton-reportes:hover > span{
-	background-position: 0 45px;
-}
-.menu-gestion ul .boton-sucursales span{
-	background-position: 88px 0;
-}
-.menu-gestion ul .boton-sucursales:hover > span{
-	background-position: 88px 45px;
-}
-
-/* ===MENU DE USUARIO=== */
-
-.contenedor-header {
-  background: #EBEBEB;
-  border-bottom: solid 1px #CCCCCC;
-}
-
- header.usuario {
-  width: 984px;
-  margin: auto;
-  padding: 20px;
-  background: #EBEBEB;
-}
-
-header.usuario h2 {
-  float: left;
-  text-align: left;
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  line-height: 35px;
-  font-size: 20px;
-}
-
-header.usuario div.datos-usuario {
-  float: right;
-  text-align: right;
-  width: 50%;
-  font-weight: 600;
-}
-
-header.usuario div.datos-usuario > span:first-child {
-  font-size: 10px;
-}
-
-header.usuario div.datos-usuario > span:last-child {
-  font-size: 14px;
+.link-cambia-sucursal {
   color: #EC0000;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-/* ===ESTRUCTURA MASCARAS / SUSCRIPTORES=== */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* ===ESTRUCTURA MENU IZQUIERDO / TABLA=== */
 
 .estructura-menu-contenido {
   width: 1024px;
@@ -193,48 +99,9 @@ header.usuario div.datos-usuario > span:last-child {
   padding: 20px;
 }
 
-.contenido-menu {
-  float: left;
-  width: 200px;
-}
-
 .contenido-derecho {
   float: left;
   width: 740px;
-}
-
-/* ===SIDEBAR IZQUIERDO=== */
-
-.sidebar-izquierdo {
-  background: #FBFBFB;
-  border: solid 1px #CCCCCC;
-  border-bottom: none;
-}
-
-.sidebar-izquierdo ul {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-izquierdo ul li {
-  margin: 0;
-  border-bottom: solid 1px #CCCCCC;
-  color: #777777;
-  font-weight: 600;
-  list-style: none;
-  cursor: pointer;
-}
-
-.sidebar-izquierdo ul li > a {
-  padding: 10px;
-  width: 178px;
-  display: inline-block;
-  color: #777777;
-}
-
-.sidebar-izquierdo ul li:hover, .item-seleccionado {
-  background: #EBEBEB;
-  color: #333333;
 }
 
 /* ===CONTENIDO DE FILTROS=== */
@@ -359,7 +226,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 25px 20px;
+  background-position: 32px 20px;
   width: 12px;
   height: 12px;
   margin-left: 6px;
@@ -384,25 +251,36 @@ h2.titulo-seccion {
 }
 
 /* AJUSTES PARA TABLA DE MASCARA */
-.tabla-generica.datos-mascara td:nth-child(2), td:nth-child(6), td:nth-child(7) {
+.datos-mascara td:nth-child(2), td:nth-child(6), td:nth-child(7) {
   text-align: right;
 }
 
 /* AJUSTES PARA TABLA DE SUSCRIPTORES */
-.tabla-generica.datos-suscriptores td:nth-child(3), td:nth-child(4) {
+.datos-suscriptores td:nth-child(3), td:nth-child(4) {
   text-align: right;
+}
+
+/* AJUSTES PARA TABLA DE ENTIDADES */
+.datos-entidades td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+  text-align: right;
+}
+
+.datos-entidades td:last-child {
+  text-align: left;
 }
 
 .tabla-generica td:last-child {
   position: relative;
 }
 
-.tabla-generica td:last-child > .boton-tres-puntitos {
+/* Boton de los 3 puntitos */
+
+.boton-tres-puntitos {
   position: absolute;
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 40px 20px;
+  background-position: 46px 20px;
   width: 10px;
   height: 20px;
   right: 4px;
@@ -436,7 +314,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 70px 20px;
+  background-position: 75px 20px;
   width: 10px;
   margin-right: 10px;
   border: none;
@@ -446,7 +324,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 58px 20px;
+  background-position: 64px 20px;
   width: 10px;
   margin-left: 10px;
   border: none;
@@ -455,13 +333,31 @@ h2.titulo-seccion {
 .paginador-generico span.pag-anterior:hover {
   background: none;
   background-image: url(../img/sprite-2.png);
-  background-position: 70px 20px;
+  background-position: 75px 20px;
 }
 
 .paginador-generico span.pag-siguiente:hover {
   background: none;
   background-image: url(../img/sprite-2.png);
-  background-position: 58px 20px;
+  background-position: 64px 20px;
+}
+
+/* == Titulo de contenidos == */
+
+h2.titulo-contenido {
+  font-size: 18px;
+  color: #EC0000;
+  font-family: 'open_sansregular';
+}
+
+h2.titulo-contenido > span {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite-2.png);
+  background-position: 63px 20px;
+  width: 10px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 /* ===Menu Adicional=== */
@@ -587,21 +483,6 @@ h2.titulo-seccion {
   margin: auto;
 }
 
-.configuracion-mascaras h2 {
-  font-size: 20px;
-  color: #EC0000;
-}
-
-.configuracion-mascaras h2 > span {
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url(../img/sprite-2.png);
-  background-position: 58px 20px;
-  width: 10px;
-  height: 20px;
-  margin-right: 10px;
-}
-
 .opciones-configuracion {
   border: solid 1px #CCCCCC;
   margin-top: 30px;
@@ -618,6 +499,26 @@ h2.titulo-seccion {
   height: 10px;
   border-radius: 10px;
   margin: 0 20px;
+}
+
+.opciones-configuracion div > span.editar {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite.png);
+  background-position: -2px -40px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  width: 14px;
+  height: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transition: transform 0.2s; /* Safari */
+  transition: transform 0.2s;
+}
+
+.opciones-configuracion div > span.editar-abierto {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
 }
 
 .config-verde {
@@ -737,7 +638,7 @@ h2.titulo-seccion {
   float: left;
 }
 
-.opciones-credito .opcion-con-switch span.opcion-no {
+span.opcion-no {
   display: inline-block;
   vertical-align: top;
   margin: 3px;
@@ -872,8 +773,8 @@ h2.titulo-seccion {
 .fila-rangos > div > span {
   display: inline-block;
   vertical-align: middle;
-  background-image: url(../img/sprite.png);
-  background-position: -35px 3px;
+  background-image: url(../img/sprite-2.png);
+  background-position: -58px -47px;
   width: 14px;
   height: 18px;
   cursor: pointer;
@@ -890,7 +791,7 @@ h2.titulo-seccion {
   text-align: left;
 }
 
-.opcion-desplegada div.administrar-desplegada select, .opcion-desplegada div.administrar-desplegada input {
+.opcion-desplegada div.administrar-desplegada select, .opcion-desplegada div.administrar-desplegada input[type="text"] {
   float: left;
   width: 300px;
   border: solid 1px #CCCCCC;
@@ -903,6 +804,8 @@ h2.titulo-seccion {
   width: 302px;
 }
 
+/*  == ESTRUCTURA DE NUEVOS ==*/
+/*== NUEVO NEGOCIO ==*/
 /*== NUEVO SUSCRIPTOR ==*/
 
 .seccion-nuevo-suscriptor .menu-gestion {
@@ -910,18 +813,35 @@ h2.titulo-seccion {
   font-weight: 600;
 }
 
-.seccion-nuevo-suscriptor .contenedor-header {
+.seccion-nuevo-negocio .contenido-nuevo {
+  padding-top: 40px;
+}
+
+.datos-domicilio-entrega > div.ajusta-top {
+  margin-top: 20px;
+}
+
+.contenido-autorizar-solicitudes {
+  margin-left: 20px;
+}
+
+.contenido-autorizar-solicitudes > div {
+  margin-top: 10px;
+}
+
+.contenedor-header {
   background: #EBEBEB;
   border-bottom: solid 1px #CCCCCC;
 }
 
-.contenido-nuevo-suscriptor {
+.contenido-nuevo {
+  font-family: 'open_sanssemibold';
   padding: 20px;
   width: 984px;
   margin: auto;
 }
 
-.contenido-nuevo-suscriptor select {
+.contenido-nuevo select {
   width: 500px;
   margin-top: 10px;
 }
@@ -931,29 +851,46 @@ h2.titulo-seccion {
   margin-top: 10px;
 }
 
+.conteo-pasos {
+  float: right;
+  padding: 20px;
+  font-size: 16px;
+}
+
 .select-disabled {
   background: #EEEEEE;
 }
 
-.contenido-nuevo-suscriptor .opciones-nuevo-suscriptor {
-  font-family: 'open_sanssemibold';
+.contenido-nuevo .opciones-nuevo {
   padding: 30px 0;
   border-bottom: solid 1px #CCCCCC;
 }
 
-.contenido-nuevo-suscriptor ul li{
+.contenido-nuevo ul li{
   padding-top: 10px;
 }
 
-.contenido-nuevo-suscriptor ul li .radio-producto {
+.radio-producto, .check-producto {
   margin-right: 10px;
 }
 
-.contenido-nuevo-suscriptor .opciones-nuevo-suscriptor:last-child, .contenido-nuevo-suscriptor .opciones-nuevo-suscriptor:nth-last-child(2) {
+.datos-domicilio-entrega {
+  margin-top: 20px;
+}
+
+.datos-domicilio-entrega > div {
+  margin-bottom: 10px;
+}
+
+.datos-domicilio-entrega > div input[type="radio"], .datos-domicilio-entrega > div input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.contenido-nuevo .opciones-nuevo:last-child, .contenido-nuevo .opciones-nuevo:nth-last-child(2) {
   border-bottom: none;
 }
 
-.opciones-nuevo-suscriptor .numero-opcion {
+.opciones-nuevo .numero-opcion {
   float: left;
   margin-right: 20px;
   width: 30px;
@@ -966,20 +903,20 @@ h2.titulo-seccion {
   border-radius: 20px;
 }
 
-.opciones-nuevo-suscriptor .activa {
+.opciones-nuevo .activa {
   background: #EC0000;
 }
 
-.opciones-nuevo-suscriptor .inactiva {
+.opciones-nuevo .inactiva {
   background: #CCCCCC;
 }
 
-.opciones-nuevo-suscriptor .contenido-opcion-suscriptor {
+.opciones-nuevo .contenido-opcion {
   float: left;
   text-align: left;
 }
 
-.opciones-nuevo-suscriptor .select-domicilio {
+.opciones-nuevo .select-domicilio {
   position: relative;
   width: 500px;
   font-family: 'open_sansregular';
@@ -990,7 +927,7 @@ h2.titulo-seccion {
   margin-top: 10px;
 }
 
-.opciones-nuevo-suscriptor .select-domicilio .opciones-select-domicilio {
+.opciones-nuevo .select-domicilio .opciones-select-domicilio {
   position: absolute;
   left: -1px;
   top: 16px;
@@ -1001,7 +938,7 @@ h2.titulo-seccion {
   z-index: 10;
 }
 
-.opciones-nuevo-suscriptor .select-domicilio .opciones-select-domicilio > span a {
+.opciones-nuevo .select-domicilio .opciones-select-domicilio > span a {
   display: block;
   color: #EC0000;
   width: 100%;
@@ -1009,23 +946,21 @@ h2.titulo-seccion {
   font-family: 'open_sanssemibold';
 }
 
-.opciones-nuevo-suscriptor .select-domicilio .opciones-select-domicilio > span a:hover {
+.opciones-nuevo .select-domicilio .opciones-select-domicilio > span a:hover {
   opacity: 1;
 }
 
-
-
-.opciones-nuevo-suscriptor .select-domicilio > span {
+.opciones-nuevo .select-domicilio > span {
     display: inline-block;
     cursor: pointer;
     width: 482px;
 }
 
-.opciones-nuevo-suscriptor .select-domicilio > span:nth-child(2) {
+.opciones-nuevo .select-domicilio > span:nth-child(2) {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 25px 14px;
+  background-position: 31px 14px;
   width: 12px;
   height: 11px;
   margin-left: 6px;
@@ -1034,10 +969,231 @@ h2.titulo-seccion {
   cursor: pointer;
 }
 
-.contenido-opcion-suscriptor > h3 {
+.contenido-opcion > h3 {
   font-family: 'open_sansbold';
   font-size: 14px;
   line-height: 30px;
+}
+
+/*== SUSCRIPTORES DETALLES ==*/
+
+.seccion-suscriptores-detalle header{
+  width: 984px;
+  margin: auto;
+  padding: 20px;
+}
+
+.seccion-suscriptores-detalle header > div:first-child {
+  float: left;
+}
+
+.seccion-suscriptores-detalle header > div.sub-opciones {
+  position: relative;
+  float: right;
+}
+
+.seccion-suscriptores-detalle header > div.sub-opciones ul li{
+  width: 100px;
+  line-height: 20px;
+  padding: 5px 20px;
+}
+
+.seccion-suscriptores-detalle .datos-header {
+  width: 984px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.seccion-suscriptores-detalle .datos-header .opciones > div {
+  float: left;
+  margin-right: 30px;
+  line-height: 20px;
+  min-width: 120px;
+  margin-top: 20px;
+}
+
+.seccion-suscriptores-detalle .datos-header .opciones > div p:first-child {
+  font-family: 'open_sansbold';
+  margin-bottom: 10px;
+}
+
+.seccion-suscriptores-detalle .datos-header .opciones > div p:last-child-child {
+  line-height: 20px;
+}
+
+.seccion-suscriptores-detalle .datos-header .opciones > div p > input {
+  width: 300px;
+}
+
+.seccion-suscriptores-detalle .datos-header .opciones > div:last-child {
+  float: none;
+  margin: 0;
+}
+
+.seccion-suscriptores-detalle .contenido-detalle {
+  width: 984px;
+  margin: auto;
+  padding: 20px;
+}
+
+.contenido-detalle .contenedor-detalle {
+  margin: 20px 0;
+  border: solid 1px #CCCCCC;
+}
+
+.contenido-detalle .contenedor-detalle > h2{
+  font-family: 'open_sanssemibold';
+  font-size: 18px;
+  padding: 20px 100px;
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.contenido-detalle .contenedor-detalle .configuracion-general > h2 {
+  font-family: 'open_sanssemibold';
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.contenido-detalle .contenedor-detalle .configuracion-general > div {
+  margin-bottom: 10px;
+}
+
+.contenido-detalle .contenedor-detalle .configuracion-general > div select {
+  min-width: 300px;
+  margin-left: 20px;
+}
+
+.contenido-detalle .contenedor-detalle .configuracion-general > div input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.contenido-detalle .contenedor-detalle .configuracion-general > div input[type="radio"] {
+  margin-right: 10px;
+}
+
+.contenido-detalle .contenedor-detalle .configuracion-general > div input[type="text"] {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+span.busca-mapa {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 19px;
+  height: 21px;
+  background-image: url(../img/sprite-2.png);
+  background-position: 98px 0;
+  cursor: pointer;
+}
+
+.botonera-domicilio-entrega {
+  padding: 10px 0;
+}
+
+.boton-radio {
+  font-family: 'open_sanssemibold';
+  float: left;
+  background-image: url(../img/bg_btn_02.png);
+  border: solid 1px #CCCCCC;
+  line-height: 26px;
+  padding: 0 10px;
+  margin-right: 10px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.input-final {
+  margin-left: 10px;
+}
+
+.input-domicilio {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.fin-linea {
+  border-bottom: solid 1px #CCCCCC;
+  padding-bottom: 20px;
+}
+
+.contenido-detalle .contenedor-detalle > div {
+  padding: 20px 100px;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div.contenedor-tabla {
+  position: relative;
+  height: 284px;
+  overflow-y: auto;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > p {
+  font-size: 14px;
+  text-align: right;
+  padding-right: 118px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table {
+  width: 100%;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table td {
+  font-family: 'open_sansregular';
+  font-size: 14px;
+  border-bottom: solid 1px #CCCCCC;
+  line-height: 20px;
+  padding: 6px 0;
+  text-align: left;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table td:last-child {
+  width: 216px;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table td .onoffswitch+span {
+  font-size: 14px;
+}
+
+.contenido-detalle .paginador-generico {
+  margin: 0;
+}
+
+.input-check > input {
+  margin-right: 10px;
+}
+
+.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table tr:first-child td {
+  border-top: solid 1px #CCCCCC;
+}
+
+/*Panel de detalles deshabilitado*/
+
+.tapa-deshabilita {
+  position: absolute;
+  background: #FFFFFF;
+  width: 800px;
+  height: 284px;
+  opacity: 0.4;
+  z-index: 10;
+}
+
+.bloquea-detalle {
+  position: absolute;
+  background: #FFFFFF;
+  opacity: 0.4;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /*==ENTIDAD NEGOCIO ==*/

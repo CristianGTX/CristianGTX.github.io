@@ -1,43 +1,45 @@
 <div class="seccion-nueva-mascara" ng-controller="nuevaMascaraCtrl as vm">
   <div class="contenedor-header">
     <header>
-  	<h2><span></span>Sueldo</h2>
-    <div class="opciones">
-      <div>
-        <p>Alta</p>
-        <p>27/09/2014</p>
+  	  <h2><span></span>Sueldo</h2>
+      <div class="opciones">
+        <div>
+          <p>Alta</p>
+          <p>27/09/2014</p>
+        </div>
+        <div>
+          <p>visibilidad</p>
+          <p class="opc-visibilidad">
+            <input type="radio" name="visibilidad" value="interna"> Interna
+            <input type="radio" name="visibilidad" value="externa"> Externa
+          </p>
+        </div>
+        <div>
+          <p>prioridad</p>
+          <p>
+            <select>
+              <option value="">Alta</option>
+              <option value="">Baja</option>
+              <option value="">Sin prioridad</option>
+            </select>
+          </p>
+        </div>
+        <div>
+          <p>Estado</p>
+          <p class="activo">Activo</p>
+        </div>
+        <div class="clear"></div>
       </div>
-      <div>
-        <p>visibilidad</p>
-        <p class="opc-visibilidad">
-          <input type="radio" name="visibilidad" value="interna"> Interna
-          <input type="radio" name="visibilidad" value="externa"> Externa
-        </p>
-      </div>
-      <div>
-        <p>prioridad</p>
-        <p>
-          <select>
-            <option value="">Alta</option>
-            <option value="">Baja</option>
-            <option value="">Sin prioridad</option>
-          </select>
-        </p>
-      </div>
-      <div>
-        <p>Estado</p>
-        <p class="activo">Activo</p>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </header>
+    </header>
   </div>
   <div class="configuracion-mascaras">
-    <h2><span></span>Inicio :: Máscaras :: Nueva Mascara</h2>
+    <h2 class="titulo-contenido"><span></span>Inicio :: Máscaras :: Nueva Mascara</h2>
     <!--PRODUCTO PRINCIPAL OFERTABLE -->
     <div class="opciones-configuracion">
-      <div><span class="config-verde"></span> 1.Producto Principal Ofertable</div>
-      <div><button class="boton-claro" ng-click="vm.abreProducto = !vm.abreProducto">Editar</button></div>
+      <div><span ng-class="{'config-rojo':vm.abreProducto, 'config-verde':!vm.abreProducto}"></span> 1.Producto Principal Ofertable</div>
+      <div>
+        <span class="editar" ng-class="{'editar-abierto':vm.abreProducto}" ng-click="vm.abreProducto = !vm.abreProducto"></span>
+      </div>
       <div class="clear"></div>
     </div>
     <div class="configuracion-desplegado" ng-if="vm.abreProducto">
@@ -187,8 +189,10 @@
       </div>
     </div>
     <div class="opciones-configuracion">
-      <div><span class="config-verde"></span> 2.Otros Productos / Upgrade</div>
-      <div><button class="boton-claro" ng-click="vm.abreUpgradeInicio()">Editar</button></div>
+      <div><span ng-class="{'config-rojo':vm.abreUpgrade, 'config-verde':!vm.abreUpgrade}"></span> 2.Otros Productos / Upgrade</div>
+      <div>
+        <span class="editar" ng-class="{'editar-abierto':vm.abreUpgrade}" ng-click="vm.abreUpgradeInicio()"></span>
+      </div>
       <div class="clear"></div>
     </div>
     <!--UPGRADE-->
@@ -485,11 +489,13 @@
       </div>
     </div>
     <div class="opciones-configuracion">
-      <div><span class="config-rojo"></span> 3.Configuración General</div>
-      <div></div>
+      <div><span ng-class="{'config-rojo':vm.abreconfiguracion, 'config-verde':!vm.abreconfiguracion}"></span> 3.Configuración General</div>
+      <div>
+        <span class="editar" ng-class="{'editar-abierto':vm.abreconfiguracion}" ng-click="vm.abreconfiguracion = !vm.abreconfiguracion"></span>
+      </div>
       <div class="clear"></div>
     </div>
-    <div class="configuracion-desplegado">
+    <div class="configuracion-desplegado" ng-if="vm.abreconfiguracion">
       <div class="onoffswitch">
           <input type="checkbox" name="administrar" class="onoffswitch-checkbox" id="administrar" checked ng-model="vm.administrar">
           <label class="onoffswitch-label" for="administrar"></label>

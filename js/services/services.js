@@ -115,6 +115,74 @@ app.service('misLotes', function(){
         ]
     };
 
+    vm.datosLotesEntidades = function(){
+        return [
+          {
+            id : 0,
+            entidad : "AMEX Camapaña 2016-Jun",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "-",
+            suscriptores: 123,
+            estado: "Activo"
+          },
+          {
+            id : 1,
+            entidad : "Asignacion Universal por hijo",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "-",
+            suscriptores: 123,
+            estado: "Activo"
+          },
+          {
+            id : 2,
+            entidad : "Base Blockbuster año 2000",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "-",
+            suscriptores: 123,
+            estado: "Activo"
+          },
+          {
+            id : 3,
+            entidad : "Fiat auto plan  - Rosario",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "-",
+            suscriptores: 123,
+            estado: "Activo"
+          },
+          {
+            id : 4,
+            entidad : "Fiat auto plan - CABA",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "-",
+            suscriptores: 123,
+            estado: "Activo"
+          },
+          {
+            id : 5,
+            entidad : "Garbarino",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "-",
+            suscriptores: 123,
+            estado: "Activo"
+          },
+          {
+            id : 6,
+            entidad : "Ministerio de relaciones Extreriores",
+            cuit : "32-12345678-0",
+            fechaAlta: "01/01/2017",
+            fechaBaja: "01/01/2018",
+            suscriptores: 123,
+            estado: "Inhabilitado"
+          }
+        ]
+    };
+
     //MENU PRINCIPAL DE LA APLICACIÓN
     vm.listaMenu = function(){
         return ['Inicio',

@@ -1,0 +1,39 @@
+/* ===MENU DE USUARIO=== */
+
+.contenedor-header {
+  background: #EBEBEB;
+  border-bottom: solid 1px #CCCCCC;
+}
+
+ header.usuario {
+  width: 984px;
+  margin: auto;
+  padding: 20px;
+  background: #EBEBEB;
+}
+
+header.usuario h2 {
+  float: left;
+  text-align: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+header.usuario div.datos-usuario {
+  float: right;
+  text-align: right;
+  width: 50%;
+  font-weight: 600;
+}
+
+header.usuario div.datos-usuario > span:first-child {
+  font-size: 10px;
+}
+
+header.usuario div.datos-usuario > span:last-child {
+  font-size: 14px;
+  color: #EC0000;
+}

@@ -1,0 +1,72 @@
+/* SUBMENU DE GESTIONES*/
+
+.contenedor-menu-gestion {
+  background: #EBEBEB;
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.menu-gestion {
+  background: #EBEBEB;
+  padding: 0;
+  margin-bottom: 40px;
+  width: 1024px;
+  margin: auto;
+}
+
+.menu-gestion > h2{
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.menu-gestion ul {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+.menu-gestion ul li {
+  float: left;
+  list-style: none;
+  line-height: 50px;
+  padding: 0 20px;
+  margin: 0;
+  font-weight: 600;
+  border-right: solid 1px #CCCCCC;
+  cursor: pointer;
+}
+
+.menu-gestion ul li:hover {
+  background-color: #6F6F6F;
+	color: #FFFFFF;
+}
+
+.menu-gestion ul li > span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 19px;
+  height: 21px;
+  background-image: url(../img/sprite-2.png);
+}
+
+.menu-gestion ul .boton-administracion span {
+	background-position: 48px 0;
+}
+
+.menu-gestion ul .boton-administracion:hover > span {
+	background-position: 48px 45px;
+}
+
+.menu-gestion ul .boton-reportes span{
+	background-position: 0 0;
+}
+.menu-gestion ul .boton-reportes:hover > span{
+	background-position: 0 45px;
+}
+.menu-gestion ul .boton-sucursales span{
+	background-position: 98px 0;
+}
+.menu-gestion ul .boton-sucursales:hover > span{
+	background-position: 98px 45px;
+}
