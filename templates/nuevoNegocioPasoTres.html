@@ -1,0 +1,39 @@
+<div class="seccion-nuevo-negocio" ng-controller="nuevoNegocioCtrl as vm">
+  <div class="contenedor-header">
+    <!--Menu de usuario-->
+    <div class="contenedor-header">
+      <div menu-usuario></div>
+    </div>
+    <div class="menu-gestion">
+      <h2 class="left">Nuevo Negocio</h2>
+      <div class="conteo-pasos">Paso 3 de 3</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="contenido-nuevo">
+    <h2 class="titulo-contenido"><span></span>Administración :: Nuevo negocio</h2>
+    <div class="opciones-nuevo">
+      <div class="numero-opcion activa">4</div>
+      <div class="contenido-opcion">
+        <h3>Sucursal de radicación</h3>
+      </div>
+      <div class="clear"></div>
+      <div class="datos-mapa">
+        <div class="solapa-ubicacion" ng-repeat="ubicacion in vm.listaUbicaciones" ng-click="vm.seleccionUbicacion(ubicacion.name)">
+          <div><input type="radio" value="{{ubicacion.name}}" ng-model="vm.ubicacionSel" name="ubicaciones" /> {{ubicacion.direccion}}</div>
+          <p>{{ubicacion.aproximado}}</p>
+          <span></span>
+        </div>
+      </div>
+      <div class="muestra-mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6080865378444!2d-58.406680685250386!3d-34.63934298045025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM4JzIxLjYiUyA1OMKwMjQnMTYuMiJX!5e0!3m2!1ses!2sar!4v1485973995667" width="700" height="425" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="botonera">
+      <button class="boton-rojo">Continuar</button>
+      <button class="boton-claro boton-con-flechita">cancelar</button>
+      <button class="boton-claro boton-con-flechita" ng-click="go('/nuevoNegocioPasoDos')">Volver</button>
+    </div>
+  </div>
+</div>

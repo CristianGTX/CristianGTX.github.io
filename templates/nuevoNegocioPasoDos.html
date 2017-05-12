@@ -1,0 +1,54 @@
+<div class="seccion-nuevo-negocio" ng-controller="nuevoNegocioCtrl as vm">
+  <div class="contenedor-header">
+    <!--Menu de usuario-->
+    <div class="contenedor-header">
+      <div menu-usuario></div>
+    </div>
+    <div class="menu-gestion">
+      <h2 class="left">Nuevo Negocio</h2>
+      <div class="conteo-pasos">Paso 2 de 3</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="contenido-nuevo">
+    <h2 class="titulo-contenido"><span></span>Administración :: Nuevo negocio</h2>
+    <div class="opciones-nuevo">
+      <div class="numero-opcion activa">3.1</div>
+      <div class="contenido-opcion-dos">
+        <h3>Definir campos para el sueldo*</h3>
+        <div class="listado-campos-asignados">
+          <p>Valor por defecto</p>
+
+          <div class="contenedor-tabla">
+            <table>
+              <tr ng-repeat="datos in vm.listaCamposAsignados">
+                <td ng-bind="datos.titulo"></td>
+                <td>
+                  <div class="onoffswitch">
+                    <input type="checkbox" name="{{datos.id}}" class="onoffswitch-checkbox" id="{{datos.id}}" checked ng-model="datos.activo">
+                    <label class="onoffswitch-label" for="{{datos.id}}"></label>
+                  </div><span ng-bind="datos.activo ? 'Visible':'No Visible'"></span>
+                </td>
+                <td class="input-check"><input type="checkbox" name="obligatorio-{{datos.id}}" value="obligatorio-{{datos.id}}" ng-model="datos.obligatorio" />obligatorio</td>
+                <td><input id="campo-{{datos.id}}" type="text" /></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="paginador-generico">
+          <span class="pag-anterior"></span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span class="pag-siguiente"></span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="botonera">
+      <button class="boton-rojo" ng-click="go('/nuevoNegocioPasoTres')">Continuar</button>
+      <button class="boton-claro boton-con-flechita">cancelar</button>
+      <button class="boton-claro boton-con-flechita" ng-click="go('/nuevoNegocioPasoUno')">Volver</button>
+    </div>
+  </div>
+</div>

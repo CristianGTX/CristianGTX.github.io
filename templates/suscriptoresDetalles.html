@@ -103,7 +103,7 @@
         <h2>Convenio: XXXX</h2>
         <div>
           <span>Sucursal de radicación por defecto</span>
-          <select ng-disabled="!vm.lecturaEdicion" ng-class="{'select-disabled':!vm.lecturaEdicion}">
+          <select ng-model="vm.sucursal" ng-change="go('/nuevoNegocioPasoTres')" ng-disabled="!vm.lecturaEdicion" ng-class="{'select-disabled':!vm.lecturaEdicion}">
             <option value="">025 - Mataderos</option>
             <option value="">027 - Flores</option>
             <option value="">029 - Caballito</option>

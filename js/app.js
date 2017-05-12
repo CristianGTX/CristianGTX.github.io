@@ -41,8 +41,16 @@ app.config(function($routeProvider,$locationProvider){
 				templateUrl: "templates/entidadNegocio.html",
 				controller: "entidadNegocioCtrl as vm"
 			})
-			.when("/nuevoNegocio", {
-				templateUrl: "templates/nuevoNegocio.html",
+			.when("/nuevoNegocioPasoUno", {
+				templateUrl: "templates/nuevoNegocioPasoUno.html",
+				controller: "nuevoNegocioCtrl as vm"
+			})
+			.when("/nuevoNegocioPasoDos", {
+				templateUrl: "templates/nuevoNegocioPasoDos.html",
+				controller: "nuevoNegocioCtrl as vm"
+			})
+			.when("/nuevoNegocioPasoTres", {
+				templateUrl: "templates/nuevoNegocioPasoTres.html",
 				controller: "nuevoNegocioCtrl as vm"
 			})
       .otherwise({

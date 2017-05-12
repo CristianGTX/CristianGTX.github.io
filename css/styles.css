@@ -916,6 +916,16 @@ span.opcion-no {
   text-align: left;
 }
 
+.contenido-opcion-dos {
+  padding: 0 60px
+}
+
+.contenido-opcion-dos h3 {
+  font-family: 'open_sansbold';
+  font-size: 14px;
+  line-height: 30px;
+}
+
 .opciones-nuevo .select-domicilio {
   position: relative;
   width: 500px;
@@ -951,9 +961,9 @@ span.opcion-no {
 }
 
 .opciones-nuevo .select-domicilio > span {
-    display: inline-block;
-    cursor: pointer;
-    width: 482px;
+  display: inline-block;
+  cursor: pointer;
+  width: 482px;
 }
 
 .opciones-nuevo .select-domicilio > span:nth-child(2) {
@@ -973,6 +983,50 @@ span.opcion-no {
   font-family: 'open_sansbold';
   font-size: 14px;
   line-height: 30px;
+}
+
+/* == NEGOCIO NUEVO PASO 3 ==*/
+.solapa-ubicacion {
+  position: relative;
+  background-color: #EBEBEB;
+  background-image: url(../img/bg_btn_02.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  border-bottom: solid 1px #EBEBEB;
+  border-left: solid 1px #EBEBEB;
+  padding: 10px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.solapa-ubicacion:first-child {
+  border-top: solid 1px #EBEBEB;
+}
+
+.solapa-ubicacion > span {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #000;
+  right: 10px;
+  top: 20px;
+}
+
+.solapa-ubicacion > div {
+  font-family: 'open_sansbold';
+  margin-bottom: 5px;
+}
+
+.solapa-ubicacion > p {
+  font-family: 'open_sansregular';
+  padding-left: 21px;
+}
+
+.solapa-ubicacion > div > input[type="radio"]{
+  margin-right: 5px;
 }
 
 /*== SUSCRIPTORES DETALLES ==*/
@@ -1123,18 +1177,20 @@ span.busca-mapa {
   padding: 20px 100px;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados {
+/* == TABLA CON SWICH == */
+
+div.listado-campos-asignados {
   position: relative;
   padding-bottom: 0;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div.contenedor-tabla {
+div.listado-campos-asignados > div.contenedor-tabla {
   position: relative;
   height: 284px;
   overflow-y: auto;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > p {
+div.listado-campos-asignados > p {
   font-size: 14px;
   text-align: right;
   padding-right: 118px;
@@ -1142,11 +1198,11 @@ span.busca-mapa {
   font-weight: 600;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table {
+div.listado-campos-asignados > div > table {
   width: 100%;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table td {
+div.listado-campos-asignados > div > table td {
   font-family: 'open_sansregular';
   font-size: 14px;
   border-bottom: solid 1px #CCCCCC;
@@ -1155,11 +1211,11 @@ span.busca-mapa {
   text-align: left;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table td:last-child {
+div.listado-campos-asignados > div > table td:last-child {
   width: 216px;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table td .onoffswitch+span {
+div.listado-campos-asignados > div > table td .onoffswitch+span {
   font-size: 14px;
 }
 
@@ -1171,7 +1227,7 @@ span.busca-mapa {
   margin-right: 10px;
 }
 
-.contenido-detalle .contenedor-detalle div.listado-campos-asignados > div > table tr:first-child td {
+div.listado-campos-asignados > div > table tr:first-child td {
   border-top: solid 1px #CCCCCC;
 }
 
@@ -1238,10 +1294,17 @@ h3.titulo-con-retorno {
   border-bottom: solid 1px #CCCCCC;
 }
 
-.contenido-entidad-negocio .datos-mapa {
+.datos-mapa {
   float: left;
   padding-top: 20px;
   padding-right: 30px;
+}
+
+.seccion-nuevo-negocio .datos-mapa, .seccion-nuevo-negocio .muestra-mapa {
+  float: left;
+  padding-top: 0;
+  padding-right: 0;
+  margin-top: 30px;
 }
 
 .contenido-entidad-negocio .datos-mapa label {
@@ -1261,11 +1324,11 @@ h3.titulo-con-retorno {
   margin-right: 10px;
 }
 
-.contenido-entidad-negocio .datos-mapa .datos-direccion > div input {
+.datos-mapa .datos-direccion > div input {
   width: 40px
 }
 
-.contenido-entidad-negocio .datos-mapa .datos-direccion > div:first-child input {
+.datos-mapa .datos-direccion > div:first-child input {
   width: 74px
 }
 

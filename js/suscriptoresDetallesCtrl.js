@@ -1,4 +1,4 @@
-app.controller("suscriptoresDetallesCtrl", function($scope){
+app.controller("suscriptoresDetallesCtrl", function($scope, $location){
   var vm = this;
   vm.opcionSeleccionada = -1;
   vm.suscriptor = true;
@@ -9,6 +9,10 @@ app.controller("suscriptoresDetallesCtrl", function($scope){
   vm.seleccionEntrega = function(sel) {
     vm.domicilioEntrega = sel;
   }
+
+  $scope.go = function ( path ) {
+    $location.path( path );
+  };
 
   //Función para abrir el menu Adicional
   vm.abreOpciones = function(index) {
@@ -74,6 +78,6 @@ app.controller("suscriptoresDetallesCtrl", function($scope){
       activo: true,
       obligatorio: false
     }
-  ]
+  ];
 
 });
