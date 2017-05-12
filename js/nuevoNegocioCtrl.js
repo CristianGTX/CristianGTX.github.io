@@ -7,6 +7,11 @@ app.controller("nuevoNegocioCtrl", function($scope, $location){
     vm.ubicacionSel = sel;
   }
 
+  vm.seleccionEntrega = function(sel) {
+    vm.domicilioEntrega = sel;
+  }
+
+
   $scope.go = function ( path ) {
     $location.path( path );
   };
