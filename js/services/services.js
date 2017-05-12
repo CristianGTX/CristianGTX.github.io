@@ -223,11 +223,6 @@ app.service('misLotes', function(){
             titulo: 'Supervisor',
             cantidad: 3,
             link: '#/supervisor'
-          },
-          {
-            titulo: 'Vendedores',
-            cantidad: 22,
-            link: '#/vendedores'
           }
         ]
     };
