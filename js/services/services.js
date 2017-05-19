@@ -1,7 +1,7 @@
 //tabla Lotes
-app.service('misLotes', function(){
+app.service('misLotes', function() {
     var vm = this
-    vm.datosLotesMascaras = function(){
+    vm.datosLotesMascaras = function() {
         return [
           {
               id : 0,
@@ -42,7 +42,113 @@ app.service('misLotes', function(){
               estado: "Inhabilitado",
               fechaAlta:"12/12/1990",
               FechaBaja: ""
+          }
+        ]
+    };
+
+    vm.datosLotesReportes = function() {
+        return [
+          {
+              id : 0,
+              mascara : "Preevaluación",
+              cuit : "32-12345678-9",
+              lote: "123456",
+              fechaAlta: "20/02/2017",
+              suscriptor: "15685215",
+              capitas: 125
           },
+          {
+              id : 1,
+              mascara : "Credencial con cta",
+              cuit : "32-12345678-9",
+              lote: "123456",
+              fechaAlta: "20/02/2017",
+              suscriptor: "65834586",
+              capitas: 879
+          },
+          {
+              id : 2,
+              mascara : "Credencial sin cta",
+              cuit : "32-12345678-9",
+              lote: "123456",
+              fechaAlta: "20/02/2017",
+              suscriptor: "35489635",
+              capitas: 457
+          },
+          {
+              id : 3,
+              mascara : "Sueldo",
+              cuit : "32-12345678-9",
+              lote: "123456",
+              fechaAlta: "20/02/2017",
+              suscriptor: "75896489",
+              capitas: 627
+          },
+          {
+              id : 4,
+              mascara : "Honorarios",
+              cuit : "32-12345678-9",
+              lote: "123456",
+              fechaAlta: "20/02/2017",
+              suscriptor: "325897613",
+              capitas: 30
+          },
+          {
+              id : 5,
+              mascara : "Viáticos",
+              cuit : "32-12345678-9",
+              lote: "123456",
+              fechaAlta: "20/02/2017",
+              suscriptor: "325897613",
+              capitas: 15
+          }
+        ]
+    };
+
+    vm.datosLotesSucursales = function() {
+        return [
+          {
+              id : 0,
+              numero : 862,
+              nombre : "central",
+              latitud: "asfadf23432343",
+              longitud: "asfadf23432343"
+          },
+          {
+              id : 1,
+              numero : 262,
+              nombre : "central",
+              latitud: "asfadf23432343",
+              longitud: "asfadf23432343"
+          },
+          {
+              id : 2,
+              numero : 862,
+              nombre : "central",
+              latitud: "asfadf23432343",
+              longitud: "asfadf23432343"
+          },
+          {
+              id : 3,
+              numero : 565,
+              nombre : "central",
+              latitud: "asfadf23432343",
+              longitud: "asfadf23432343"
+          },
+          {
+              id : 4,
+              numero : 462,
+              nombre : "central",
+              latitud: "asfadf23432343",
+              longitud: "asfadf23432343"
+          },
+          {
+              id : 5,
+              numero : 1262,
+              nombre : "central",
+              latitud: "asfadf23432343",
+              longitud: "asfadf23432343"
+          }
         ]
     };
 
@@ -179,6 +285,53 @@ app.service('misLotes', function(){
             fechaBaja: "01/01/2018",
             suscriptores: 123,
             estado: "Inhabilitado"
+          }
+        ]
+    };
+
+    vm.datosLotesNegocios = function(){
+        return [
+          {
+            id : 0,
+            negocio : "ANSES",
+            entidades : 862,
+            suscriptores: 1201,
+            estado: "Activo"
+          },
+          {
+            id : 1,
+            negocio : "Plan de aceditación de sueldos",
+            entidades : 262,
+            suscriptores: 999,
+            estado: "Activo"
+          },
+          {
+            id : 2,
+            negocio : "Universidades",
+            entidades : 862,
+            suscriptores: 1201,
+            estado: "Activo"
+          },
+          {
+            id : 3,
+            negocio : "Convenios",
+            entidades : 565,
+            suscriptores: 1256,
+            estado: "Activo"
+          },
+          {
+            id : 4,
+            negocio : "PreembozadosMonoproductos",
+            entidades : 462,
+            suscriptores: 1601,
+            estado: "Activo"
+          },
+          {
+            id : 5,
+            negocio : "Preevaluación sin producto",
+            entidades : 1262,
+            suscriptores: 1333,
+            estado: "Activo"
           }
         ]
     };

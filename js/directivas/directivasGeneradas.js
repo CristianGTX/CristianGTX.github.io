@@ -11,7 +11,10 @@ app.directive('menuLateral', function() {
 app.directive('menuGestion', function() {
   return {
     restrict : 'AE',
-    templateUrl: '../templates/menuGestion.html'
+    templateUrl: '../templates/menuGestion.html',
+    scope : {
+      seleccion : "=index"
+    }
   };
 });
 

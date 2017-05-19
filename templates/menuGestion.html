@@ -1,7 +1,7 @@
-<div class="menu-gestion">
+<div class="menu-gestion" ng-controller="menuGestionCtrl as vm">
 	<ul>
-		<li class="boton-administracion"><span></span>Administración</li>
-		<li class="boton-reportes"><span></span>Reportes</li>
-		<li class="boton-sucursales"><span></span>Sucursales</li>
+		<li class="boton-administracion" ng-click="go('/')"><span></span>Administración</li>
+		<li class="boton-reportes" ng-click="go('/reportes')"><span></span>Reportes</li>
+		<li class="boton-sucursales" ng-click="go('/sucursales')"><span></span>Sucursales</li>
 	</ul>
 </div>

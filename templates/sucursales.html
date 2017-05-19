@@ -1,0 +1,47 @@
+<div class="seccion-sucursales" ng-controller="sucursalesCtrl as vm">
+  <!--Menu de usuario-->
+  <div class="contenedor-header">
+    <div menu-usuario></div>
+  </div>
+  <!--Menu de gestión-->
+  <div menu-gestion class="contenedor-menu-gestion"></div>
+  <div class="contenedor-sucursales contenido-estructura">
+    <h2 class="titulo-contenido">Sucursales</h2>
+    <div class="bloque-buscador">
+      <p>Nombre sucursal</p>
+      <div class="buscador">
+        <span></span>
+        <input type="text" placeholder="Ingresar" />
+      </div>
+    </div>
+    <div class="bloque-buscador">
+      <p>Número sucursal</p>
+      <div class="buscador">
+        <span></span>
+        <input type="text" placeholder="Ingresar" />
+      </div>
+    </div>
+    <div class="clear"></div>
+    <table class="tabla-generica datos-sucursales">
+       <tr>
+         <th>Número<span></span></th>
+         <th>Nombre<span></span></th>
+         <th>Latitud<span></span></th>
+         <th>Longitud<span></span></th>
+       </tr>
+       <tr ng-repeat="datos in vm.tablaSucursales">
+         <td ng-bind="datos.numero"></td>
+         <td ng-bind="datos.nombre"></td>
+         <td>{{datos.latitud}}<span></span></td>
+         <td>{{datos.longitud}}<span></span></td>
+       </tr>
+    </table>
+    <div class="paginador-generico">
+      <span class="pag-anterior"></span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span class="pag-siguiente"></span>
+    </div>
+  </div>
+</div>

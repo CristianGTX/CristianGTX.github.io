@@ -1,7 +1,7 @@
-app.controller("entidadesCtrl", function($scope, misLotes){
+app.controller("negociosCtrl", function($scope, misLotes){
   var vm = this;
   //Datos que se van a cargar en la tabla de Entidades
-  vm.tablaEntidades = misLotes.datosLotesEntidades();
+  vm.tablaNegocios = misLotes.datosLotesNegocios();
 
   //Función para abrir el menu Adicional
   vm.abreOpciones = function(index) {

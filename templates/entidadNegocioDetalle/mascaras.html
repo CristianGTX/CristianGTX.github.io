@@ -1,0 +1,85 @@
+<div class="seccion-detalles" ng-controller="entidadNegocioCtrl as vm">
+  <div class="contenedor-header">
+    <header>
+      <div><h2 class="con-flecha">Ministerio de Relaciones Interiores y Culto (467)</h2></div>
+      <div class="sub-opciones">
+        <span class="boton-tres-puntitos" ng-click="vm.abreOpciones($index)"></span>
+        <div class="menu-adicional" ng-if="vm.opcionSeleccionada === $index">
+          <ul>
+            <li>Nuevo archivo</li>
+            <li>Inhabilitar</li>
+            <li>Exportar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </header>
+    <div class="datos-header">
+      <div class="opciones">
+        <div>
+          <p>Alta</p>
+          <p>27/09/2014</p>
+        </div>
+        <div>
+          <p>Baja</p>
+          <p>-</p>
+        </div>
+        <div>
+          <p>Domicilio de entrega</p>
+          <p>Av.Roque Saenz Peña 650, P2, (CP 1242)</p>
+        </div>
+        <div>
+          <p>Estado</p>
+          <p class="activo">Activo</p>
+        </div>
+        <div>
+          <p>Asignado</p>
+          <p>Máscara</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="contenido-detalle entidades-mascara-titulo">
+    <h2 class="titulo-contenido left"><span></span>Administración :: Entidades :: Máscaras</h2>
+    <div class="clear"></div>
+    <div class="contenedor-mascaras-entidades">
+      <div class="menu-mascaras-izquierdo">
+        <div class="opc-seleccionada">Máscaras<span></span></div>
+        <div class="sub-opciones">
+          <ul>
+            <li class="sub-opc-seleccionada">Sueldo</li>
+            <li>Honorarios</li>
+          </ul>
+        </div>
+        <div ng-click="go('/entidadNegocioDetalle/configuracionGeneral')">Configuración genereal</div>
+      </div>
+      <div class="contenido-derecho">
+        <h3 class="configuracion-titulo">Sueldo</h3>
+        <div class="listado-campos-asignados">
+          <p>Valor por defecto</p>
+          <div>
+            <table>
+              <tr ng-repeat="datos in vm.listaCamposAsignados">
+                <td ng-bind="datos.titulo"></td>
+                <td>
+                  <span ng-bind="datos.activo ? 'Visible':'No Visible'"></span>
+                </td>
+                <td class="input-check"><input type="checkbox" name="obligatorio-{{datos.id}}" value="obligatorio-{{datos.id}}" ng-model="datos.obligatorio" />obligatorio</td>
+                <td><input id="campo-{{datos.id}}" type="text" ng-disabled="!datos.obligatorio" ng-class="{'select-disabled':vm.obligatorio}" /></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="paginador-generico">
+          <span class="pag-anterior"></span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span class="pag-siguiente"></span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>

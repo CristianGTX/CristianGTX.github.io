@@ -1,0 +1,92 @@
+<div class="seccion-detalles" ng-controller="entidadNegocioCtrl as vm">
+  <div class="contenedor-header">
+    <header>
+      <div><h2 class="con-flecha">Ministerio de Relaciones Interiores y Culto (467)</h2></div>
+      <div class="sub-opciones">
+        <span class="boton-tres-puntitos" ng-click="vm.abreOpciones($index)"></span>
+        <div class="menu-adicional" ng-if="vm.opcionSeleccionada === $index">
+          <ul>
+            <li>Nuevo archivo</li>
+            <li>Inhabilitar</li>
+            <li>Exportar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </header>
+    <div class="datos-header">
+      <div class="opciones">
+        <div>
+          <p>Alta</p>
+          <p>27/09/2014</p>
+        </div>
+        <div>
+          <p>Baja</p>
+          <p>-</p>
+        </div>
+        <div>
+          <p>Domicilio de entrega</p>
+          <p>Av.Roque Saenz Peña 650, P2, (CP 1242)</p>
+        </div>
+        <div>
+          <p>Estado</p>
+          <p class="activo">Activo</p>
+        </div>
+        <div>
+          <p>Asignado</p>
+          <p>Máscara</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="contenido-detalle entidades-mascara-titulo">
+    <h2 class="titulo-contenido left"><span></span>Administración :: Entidades :: Máscaras</h2>
+    <div class="clear"></div>
+    <div class="contenedor-mascaras-entidades">
+      <div class="menu-mascaras-izquierdo">
+        <div ng-click="go('/entidadNegocioDetalle/mascaras')">Máscaras<span></span></div>
+        <div class="opc-seleccionada">Configuración general</div>
+      </div>
+      <div class="contenido-derecho">
+        <div class="contenido-opcion">
+          <h3>Tipo de domicilio de entrega</h3>
+          <div class="botonera-domicilio-entrega">
+            <div class="boton-radio" ng-click="vm.seleccionEntrega('suscriptor')">
+              <input type="radio" ng-model="vm.domicilioEntrega" name="domicilioEntrega" value="suscriptor" ng-checked="vm.suscriptor" />
+              <span>Suscriptor</span>
+            </div>
+            <div class="boton-radio" ng-click="vm.seleccionEntrega('interno')">
+              <input type="radio" ng-model="vm.domicilioEntrega" name="domicilioEntrega" value="interno" ng-checked="vm.interno" />
+              <span>Interno</span>
+            </div>
+            <div class="clear"></div>
+            <div class="datos-domicilio-entrega">
+              <div><input type="radio" name="entrega" /><span>Persona</span></div>
+              <div><input type="radio" name="entrega" /><span>Suscriptor</span></div>
+              <div><input type="radio" name="entrega" /><span>Andreani</span></div>
+              <div><input type="radio" name="entrega" /><span>Sucursal</span></div>
+              <div><input type="radio" name="entrega" /><span>Áreas centralizadas</span></div>
+              <div>
+                <input class="input-largo" type="text" value="Aguirre 540, CABA" />
+                <a href="#/entidadNegocioDetalle/configuracionGeneralAC"><span class="busca-mapa"></span></a>
+              </div>
+              <div class="fin-linea"><input type="checkbox" name="domicilio" value="modificarDomicilio" />Permitir cambiar domicilio de entrega</div>
+              <div class="ajusta-top"><input type="checkbox" name="autorizar" value="Autorizar" />Autorizar solicitudes</div>
+              <div class="contenido-autorizar-solicitudes">
+                <div><input type="radio" name="cambiar" /><span>Permitir cambiar</span></div>
+                <div><input type="radio" name="cambiar" /><span>No permitir cambiar</span></div>
+              </div>
+              <div class="fin-linea"><input type="checkbox" name="rescate" value="rescate" />Realizar rescate para FFVV</div>
+              <div class="fin-linea ajusta-top"><input type="checkbox" name="autogestion" value="autogestion" />Autogestión</div>
+              <div class="ajusta-top">Sucursal de radicación</div>
+              <div><input class="input-domicilio" type="text" value="OBELISCO Av.Corrientes XXXX" /><span ng-click="go('/entidadNegocioDetalle/configuracionGeneralSR')" class="link-cambia-sucursal">Cambiar Sucursal ></span></div>
+              <div><input type="checkbox" name="sucursal" value="verificar" />Verificar sucursal de radicación</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>

@@ -37,10 +37,22 @@ app.config(function($routeProvider,$locationProvider){
 				templateUrl: "templates/entidades.html",
 				controller: "entidadesCtrl as vm"
 			})
-			.when("/entidadNegocio", {
-				templateUrl: "templates/entidadNegocio.html",
+      .when("/entidadNegocioDetalle/mascaras", {
+				templateUrl: "templates/entidadNegocioDetalle/mascaras.html",
 				controller: "entidadNegocioCtrl as vm"
 			})
+			.when("/entidadNegocioDetalle/configuracionGeneral", {
+        templateUrl: "templates/entidadNegocioDetalle/configuracionGeneral.html",
+        controller: "entidadNegocioCtrl as vm"
+      })
+      .when("/entidadNegocioDetalle/configuracionGeneralAC", {
+				templateUrl: "templates/entidadNegocioDetalle/configuracionGeneralAC.html",
+				controller: "entidadNegocioCtrl as vm"
+			})
+      .when("/entidadNegocioDetalle/configuracionGeneralSR", {
+        templateUrl: "templates/entidadNegocioDetalle/configuracionGeneralSR.html",
+        controller: "entidadNegocioCtrl as vm"
+      })
 			.when("/nuevoNegocioPasoUno", {
 				templateUrl: "templates/nuevoNegocioPasoUno.html",
 				controller: "nuevoNegocioCtrl as vm"
@@ -53,6 +65,22 @@ app.config(function($routeProvider,$locationProvider){
 				templateUrl: "templates/nuevoNegocioPasoTres.html",
 				controller: "nuevoNegocioCtrl as vm"
 			})
+      .when("/negocios", {
+				templateUrl: "templates/negocios.html",
+				controller: "negociosCtrl as vm"
+			})
+      .when("/negociosDetalles", {
+        templateUrl: "templates/negociosDetalles.html",
+        controller: "negociosDetallesCtrl as vm"
+      })
+      .when("/reportes", {
+        templateUrl: "templates/reportes.html",
+        controller: "reportesCtrl as vm"
+      })
+      .when("/sucursales", {
+        templateUrl: "templates/sucursales.html",
+        controller: "sucursalesCtrl as vm"
+      })
       .otherwise({
         redirectTo: '/'
     });

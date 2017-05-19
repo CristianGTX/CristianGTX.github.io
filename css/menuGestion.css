@@ -51,11 +51,11 @@
 }
 
 .menu-gestion ul .boton-administracion span {
-	background-position: 48px 0;
+	background-position: 64px 0;
 }
 
 .menu-gestion ul .boton-administracion:hover > span {
-	background-position: 48px 45px;
+	background-position: 64px 45px;
 }
 
 .menu-gestion ul .boton-reportes span{
@@ -65,8 +65,8 @@
 	background-position: 0 45px;
 }
 .menu-gestion ul .boton-sucursales span{
-	background-position: 98px 0;
+	background-position: 65px 0;
 }
 .menu-gestion ul .boton-sucursales:hover > span{
-	background-position: 98px 45px;
+	background-position: 65px 45px;
 }

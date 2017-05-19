@@ -1,0 +1,122 @@
+<div class="seccion-reportes" ng-controller="reportesCtrl as vm">
+  <!--Menu de usuario-->
+  <div class="contenedor-header">
+    <div menu-usuario></div>
+  </div>
+  <!--Menu de gestión-->
+  <div menu-gestion class="contenedor-menu-gestion"></div>
+  <div class="contenedor-reportes contenido-estructura">
+    <!--Panel de filtros-->
+    <div class="panel-filtros-generico">
+      <h2 class="titulo-seccion">Reportes</h2>
+      <div class="filtro">
+        <div class="boton-filtro" ng-click="vm.toggleFiltro()">
+          <span></span>
+          <span>Filtrar<span>
+        </div>
+      </div>
+    </div>
+    <!--Filtro activado -->
+    <div class="panel-filtros" ng-if="vm.filtroActivo">
+      <div class="close-filtro" ng-click="vm.toggleFiltro()"></div>
+      <div class="filtro-interno">
+        <p>Tipo resporte</p>
+        <div class="tipo-reporte">
+          <input type="radio" name="tipo-reporte" value="general" ng-model="vm.tipoReporte" checked /> General
+          <input type="radio" name="tipo-reporte" value="distalzo" ng-model="vm.tipoReporte" /> Distalzo
+        </div>
+      </div>
+      <div class="filtro-interno">
+        <p>Fecha de Alta</p>
+        <select>
+          <option value="">Desde</option>
+          <option value="">Desde</option>
+          <option value="">Desde</option>
+        </select>
+        <select>
+          <option value="">Hasta</option>
+          <option value="">Desde</option>
+          <option value="">Desde</option>
+        </select>
+      </div>
+      <div class="filtro-interno" ng-show="vm.tipoReporte === 'general'">
+        <p>Negocio</p>
+        <select>
+          <option value="">Todos</option>
+          <option value="">Negocio electrónica</option>
+          <option value="">Negocio 3</option>
+        </select>
+      </div>
+      <div class="filtro-interno" ng-show="vm.tipoReporte === 'general'">
+        <p>Máscara</p>
+        <select>
+          <option value="">Todos</option>
+          <option value="">Preevaluación</option>
+          <option value="">Sueldo</option>
+        </select>
+      </div>
+      <div class="filtro-interno" ng-show="vm.tipoReporte === 'general'">
+        <p>Tipo reporte</p>
+        <select>
+          <option value="">Todas</option>
+          <option value="">Tipo reporte 2</option>
+          <option value="">Tipo 3</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+      <div ng-show="vm.tipoReporte === 'general'">
+        <div class="filtro-interno">
+          <p>CUIT entidad</p>
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Ingresar" />
+          </div>
+        </div>
+        <div class="filtro-interno">
+          <p>Máscara</p>
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Ingresar" />
+          </div>
+        </div>
+        <div class="filtro-interno">
+          <p>Suscriptor</p>
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Ingresar" />
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <table class="tabla-generica datos-reportes">
+       <tr>
+         <th><input type="checkbox" name="checkAll" id="chekAll" /></th>
+         <th ng-show="vm.tipoReporte === 'general'">Máscara<span></span></th>
+         <th ng-show="vm.tipoReporte === 'general'">CUIT empresa<span></span></th>
+         <th ng-show="vm.tipoReporte === 'general'">Número Lote<span></span></th>
+         <th ng-class="{'ajuste-tabla':vm.tipoReporte !== 'general'}">Fecha alta<span></span></th>
+         <th ng-show="vm.tipoReporte === 'general'">Suscriptor<span></span></th>
+         <th ng-show="vm.tipoReporte === 'general'">Cápitas<span></span></th>
+       </tr>
+       <tr ng-repeat="datos in vm.tablaReportes">
+         <td><input type="checkbox" name="check-{{datos.suscriptor}}" id="check-{{datos.suscriptor}}" /></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.mascara"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.cuit"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.lote"></td>
+         <td ng-class="{'ajuste-tabla':vm.tipoReporte !== 'general'}" ng-bind="datos.fechaAlta"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.suscriptor"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.capitas"></td>
+       </tr>
+    </table>
+    <div class="paginador-generico">
+      <span class="pag-anterior"></span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span class="pag-siguiente"></span>
+    </div>
+    <div class="link-descarga"><a href="#/reportes">Descargue la información a su PC</a></div>
+  </div>
+</div>

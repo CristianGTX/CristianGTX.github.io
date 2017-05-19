@@ -482,7 +482,7 @@ i, cite, em, var, address, dfn {
 .orange{color:  #f7941d}
 .red{color: #ec0000}
 .bgWhite{background: white !important}
-a{cursor: pointer;text-decoration: none !important;}
+a{cursor: pointer;text-decoration: none;}
 a:hover{opacity: 0.8}
 .float_right{float: right !important;}
 .align_right{text-align: right !important;}

@@ -70,8 +70,12 @@ body div.menu-principal ul li:nth-child(2n+1) {
 input[type="text"], select {
   border: solid 1px #CCCCCC;
   border-top: solid 2px #CCCCCC;
-  padding: 2px 5px;
 }
+
+input[type="text"] {
+  padding: 2px;
+}
+
 
 .link-cambia-sucursal {
   color: #EC0000;
@@ -184,14 +188,15 @@ h2.titulo-seccion {
 }
 
 .panel-filtros p {
+  font-family: 'open_sanssemibold';
+  margin-bottom: 15px;
   font-size: 14px;
-  /*font-weight: 600;*/
-  margin-bottom: 10px;
 }
 
 .panel-filtros select {
-  font-size: 14px;
+  /*font-size: 14px;*/
   margin-right: 10px;
+  height: 22px;
 }
 
 .panel-filtros .filtro-interno {
@@ -203,6 +208,45 @@ h2.titulo-seccion {
 .clear {
   clear: both;
 }
+
+/*Link para descargas*/
+
+.link-descarga {
+  margin-top: 20px;
+}
+
+.link-descarga a {
+  color: #EC0000;
+  text-decoration: underline;
+}
+
+
+/*== INPUT BUSCADOR ==*/
+
+.buscador {
+  background: #FFFFFF;
+  width: 150px;
+  border: solid 1px #CCCCCC;
+  border-top: solid 2px #CCCCCC;
+  height: 19px;
+}
+
+.buscador > span {
+  margin-left: 4px;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite-2.png);
+  background-position: 40px 0px;
+  width: 14px;
+  height: 14px;
+}
+
+.buscador > input {
+  border: none;
+  width: 110px;
+}
+
 /*=== TABLAS GENERALES === */
 
 .tabla-generica {
@@ -226,7 +270,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 32px 20px;
+  background-position: 72px 20px;
   width: 12px;
   height: 12px;
   margin-left: 6px;
@@ -260,12 +304,63 @@ h2.titulo-seccion {
   text-align: right;
 }
 
-/* AJUSTES PARA TABLA DE ENTIDADES */
-.datos-entidades td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+/* AJUSTES PARA TABLA DE ENTIDADES Y NEGOCIOS */
+.datos-entidades td:nth-child(2), td:nth-child(3), td:nth-child(4), .datos-negocios td:nth-child(2), td:nth-child(3), td:nth-child(4){
   text-align: right;
 }
 
-.datos-entidades td:last-child {
+/* AJUSTES PARA SUCURSALES */
+
+.datos-sucursales {
+  margin-top: 30px;
+}
+
+.datos-sucursales td > span {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite-2.png);
+  background-position: 135px 20px;
+  width: 20px;
+  height: 22px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.datos-sucursales td:nth-child(1), td:nth-child(3), td:nth-child(4) {
+  text-align: right;
+}
+
+/* AJUSTES PARA REPORTES */
+.datos-reportes td:nth-child(1) {
+  text-align: center;
+  width: 40px;
+}
+
+.datos-reportes td:nth-child(5) {
+  text-align: right;
+}
+
+.datos-reportes td.ajuste-tabla, .datos-reportes th.ajuste-tabla {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.seccion-reportes .tipo-reporte {
+  font-family: 'open_sanssemibold';
+  line-height: 22px;
+  margin-right: 10px;
+}
+
+.seccion-reportes .tipo-reporte > input[type="radio"] {
+  margin-right: 5px;
+}
+
+.seccion-reportes .tipo-reporte > input[type="radio"]:last-child {
+  margin-left: 10px;
+}
+
+.datos-entidades td:last-child, .datos-negocios td:last-child {
   text-align: left;
 }
 
@@ -280,7 +375,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 46px 20px;
+  background-position: 88px 20px;
   width: 10px;
   height: 20px;
   right: 4px;
@@ -314,7 +409,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 75px 20px;
+  background-position: 116px 20px;
   width: 10px;
   margin-right: 10px;
   border: none;
@@ -324,7 +419,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 64px 20px;
+  background-position: 104px 20px;
   width: 10px;
   margin-left: 10px;
   border: none;
@@ -333,13 +428,13 @@ h2.titulo-seccion {
 .paginador-generico span.pag-anterior:hover {
   background: none;
   background-image: url(../img/sprite-2.png);
-  background-position: 75px 20px;
+  background-position: 116px 20px;
 }
 
 .paginador-generico span.pag-siguiente:hover {
   background: none;
   background-image: url(../img/sprite-2.png);
-  background-position: 64px 20px;
+  background-position: 104px 20px;
 }
 
 /* == Titulo de contenidos == */
@@ -354,7 +449,7 @@ h2.titulo-contenido > span {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 63px 20px;
+  background-position: 104px 20px;
   width: 10px;
   height: 20px;
   margin-right: 10px;
@@ -424,11 +519,11 @@ h2.titulo-contenido > span {
   background: #EBEBEB;
 }
 
-.seccion-nueva-mascara header h2{
+h2.con-flecha {
   font-size: 20px;
 }
 
-.seccion-nueva-mascara header h2 > span{
+h2.con-flecha > span{
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite.png);
@@ -532,14 +627,15 @@ h2.titulo-contenido > span {
 .control-descripcion {
   display: inline-block;
   vertical-align: middle;
-  background-image: url(../img/sprite.png);
-  background-position: -35px 3px;
+  background-image: url(../img/sprite-2.png);
+  background-position: -58px -47px;
   width: 14px;
   height: 18px;
   margin-left: 10px;
 }
 
 .descripcion-ok {
+  background-image: url(../img/sprite.png);
   background-position: -90px 3px;
 }
 
@@ -911,7 +1007,7 @@ span.opcion-no {
   background: #CCCCCC;
 }
 
-.opciones-nuevo .contenido-opcion {
+.contenido-opcion {
   float: left;
   text-align: left;
 }
@@ -970,7 +1066,7 @@ span.opcion-no {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 31px 14px;
+  background-position: 72px 14px;
   width: 12px;
   height: 11px;
   margin-left: 6px;
@@ -1031,35 +1127,36 @@ span.opcion-no {
 
 /*== SUSCRIPTORES DETALLES ==*/
 
-.seccion-suscriptores-detalle header{
+.seccion-detalles header{
   width: 984px;
   margin: auto;
   padding: 20px;
+  line-height: 30px;
 }
 
-.seccion-suscriptores-detalle header > div:first-child {
+.seccion-detalles header > div:first-child {
   float: left;
 }
 
-.seccion-suscriptores-detalle header > div.sub-opciones {
+.seccion-detalles header > div.sub-opciones {
   position: relative;
   float: right;
 }
 
-.seccion-suscriptores-detalle header > div.sub-opciones ul li{
+.seccion-detalles header > div.sub-opciones ul li{
   width: 100px;
   line-height: 20px;
   padding: 5px 20px;
 }
 
-.seccion-suscriptores-detalle .datos-header {
+.seccion-detalles .datos-header {
   width: 984px;
   margin: auto;
   padding: 20px;
   padding-top: 0;
 }
 
-.seccion-suscriptores-detalle .datos-header .opciones > div {
+.seccion-detalles .datos-header .opciones > div {
   float: left;
   margin-right: 30px;
   line-height: 20px;
@@ -1067,28 +1164,37 @@ span.opcion-no {
   margin-top: 20px;
 }
 
-.seccion-suscriptores-detalle .datos-header .opciones > div p:first-child {
+.seccion-detalles .datos-header .opciones > div p:first-child {
   font-family: 'open_sansbold';
   margin-bottom: 10px;
 }
 
-.seccion-suscriptores-detalle .datos-header .opciones > div p:last-child-child {
+.seccion-detalles .datos-header .opciones > div p:last-child-child {
   line-height: 20px;
 }
 
-.seccion-suscriptores-detalle .datos-header .opciones > div p > input {
+.seccion-detalles .datos-header .opciones > div p > input {
   width: 300px;
 }
 
-.seccion-suscriptores-detalle .datos-header .opciones > div:last-child {
+.seccion-detalles .datos-header .opciones > div:last-child {
   float: none;
   margin: 0;
 }
 
-.seccion-suscriptores-detalle .contenido-detalle {
+.seccion-detalles .contenido-detalle {
   width: 984px;
   margin: auto;
-  padding: 20px;
+  padding: 0 20px;
+}
+
+.seccion-detalles .inicio-detalles {
+  margin-top: 30px;
+}
+
+.seccion-detalles .menu-adicional {
+  top: 40px;
+  right: -15px;
 }
 
 .contenido-detalle .contenedor-detalle {
@@ -1136,10 +1242,10 @@ span.busca-mapa {
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
-  width: 19px;
+  width: 16px;
   height: 21px;
   background-image: url(../img/sprite-2.png);
-  background-position: 98px 0;
+  background-position: 40px 21px;
   cursor: pointer;
 }
 
@@ -1252,6 +1358,19 @@ div.listado-campos-asignados > div > table tr:first-child td {
   bottom: 0;
 }
 
+/*==NEGOCIO DETALLES==*/
+.contenido-mascaras-detalles ul li {
+  margin-bottom: 10px;
+}
+
+.contenido-detalle .contenedor-detalle > div.detalle-negocios {
+  padding-bottom: 0;
+}
+
+.detalle-negocios .tapa-deshabilita {
+  height: 230px;
+}
+
 /*==ENTIDAD NEGOCIO ==*/
 
 .entidad-negocio .menu-entidad-negocio {
@@ -1281,7 +1400,94 @@ div.listado-campos-asignados > div > table tr:first-child td {
   border: none;
 }
 
-.entidad-negocio .contenido-entidad-negocio {
+/*entidad negocio -- máscaras*/
+
+h3.configuracion-titulo {
+  font-family: 'open_sanssemibold';
+  font-size: 16px;
+}
+
+.entidades-mascara-titulo div.listado-campos-asignados > p {
+  padding-right: 100px;
+}
+
+.menu-mascaras-izquierdo {
+  float: left;
+  font-family: 'open_sanssemibold';
+  background: #FBFBFB;
+  width: 180px;
+  border: solid 1px #CCCCCC;
+  margin-right: 30px;
+}
+
+.menu-mascaras-izquierdo ul {
+  margin-left: 30px;
+  padding-top: 10px;
+}
+
+.menu-mascaras-izquierdo ul li {
+  padding-bottom: 10px;
+  list-style-type: disc;
+  cursor: pointer;
+}
+
+.menu-mascaras-izquierdo > div {
+  padding: 10px;
+  border-bottom: solid 1px #CCCCCC;
+  cursor: pointer;
+}
+
+.menu-mascaras-izquierdo .sub-opciones {
+  padding: 0 20px;
+  cursor: default;
+}
+
+.menu-mascaras-izquierdo > div.opc-seleccionada {
+  position: relative;
+  font-family: 'open_sansbold';
+  background: #CCCCCC;
+}
+
+.menu-mascaras-izquierdo > div.opc-seleccionada > span{
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -38px;
+  width: 16px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.menu-mascaras-izquierdo > div .sub-opc-seleccionada {
+  color: #EC0000;
+}
+
+.menu-mascaras-izquierdo > div:last-child {
+  border-bottom: none;
+}
+
+.contenedor-mascaras-entidades {
+  margin-bottom: 30px;
+}
+
+.contenedor-mascaras-entidades .listado-campos-asignados {
+  margin-bottom: 30px;
+}
+
+.seccion-detalles .contenido-detalle {
+  margin-top: 30px;
+}
+
+.seccion-detalles .contenido-detalle > h2 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/***************************/
+
+.contenido-estructura {
   padding: 30px 20px;
   width: 984px;
   margin: auto;
@@ -1300,7 +1506,7 @@ h3.titulo-con-retorno {
   padding-right: 30px;
 }
 
-.seccion-nuevo-negocio .datos-mapa, .seccion-nuevo-negocio .muestra-mapa {
+.muestra-mapa {
   float: left;
   padding-top: 0;
   padding-right: 0;
@@ -1341,13 +1547,39 @@ h3.titulo-con-retorno {
   float: none;
 }
 
-.contenido-entidad-negocio .muestra-mapa {
+.muestra-mapa {
   float: left;
   margin-top: 20px;
 }
 
 .contenido-entidad-negocio .botonera {
   margin-top: 20px;
+}
+
+/* ==SUCURSALES==*/
+.contenedor-sucursales {
+  padding: 40px 20px;
+}
+
+.contenedor-sucursales h2 {
+  margin-bottom: 20px;
+}
+
+.contenedor-sucursales .bloque-buscador .buscador {
+  width: 180px;
+}
+.contenedor-sucursales .bloque-buscador .buscador > input{
+  width: 150px;
+}
+
+.contenedor-sucursales .bloque-buscador {
+  float: left;
+  margin-right: 20px;
+}
+
+.contenedor-sucursales .bloque-buscador > p {
+  font-family: 'open_sanssemibold';
+  margin-bottom: 10px;
 }
 
 /* ===SWITCH=== */
