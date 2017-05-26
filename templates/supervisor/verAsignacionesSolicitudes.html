@@ -1,0 +1,80 @@
+<div class="seccion-supervisores" ng-controller="supervisorCtrl as vm">
+<!--Menu de usuario-->
+  <div class="contenedor-header">
+    <header class="menu-supervisor"><h2>Tablero Supervisor</h2></header>
+  </div>
+
+  <div class="estructura-menu-contenido">
+    <!--Menu lateral Izquierdo-->
+    <menu-lateral index="{ nro:4 }" opcion="{ nro:3 }" class="contenido-menu"></menu-lateral>
+  	<!--Contenido de la seccion mascaras-->
+  	<div class="contenido-derecho">
+      <!--Panel de filtros-->
+      <div class="panel-filtros-generico">
+  	    <h2 class="titulo-seccion">Solicitudes / Ver asignaciones</h2>
+  	    <div class="filtro">
+          <div class="boton-filtro" ng-click="vm.toggleFiltro()">
+            <span></span>
+            <span>Filtrar<span>
+          </div>
+        </div>
+        <div class="clear"></div>
+  	  </div>
+      <!--Filtro activado -->
+      <div class="panel-filtros" ng-if="vm.filtroActivo">
+        <div class="close-filtro" ng-click="vm.toggleFiltro()"></div>
+        <div class="filtro-interno">
+          <p>Zona</p>
+          <select>
+            <option value="">Todas</option>
+            <option value="">Ramos Mejia</option>
+            <option value="">Desde</option>
+          </select>
+        </div>
+        <div class="filtro-interno">
+          <p>Sucursal</p>
+          <select>
+            <option value="">Todas</option>
+            <option value="">Ramos Mejia</option>
+            <option value="">Desde</option>
+          </select>
+        </div>
+        <div class="filtro-interno">
+          <p>Vendedor</p>
+          <select>
+            <option value="">Todos</option>
+            <option value="">Musimundo</option>
+            <option value="">Frávega</option>
+          </select>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <!--Tabla con el contenido de Solicitudes asignadas -->
+      <table class="tabla-generica datos-solicitudes-ver-asignadas">
+         <tr>
+           <th>Zona<span></span></th>
+           <th>Sucursal<span></span></th>
+           <th>Vendedor<span></span></th>
+           <th>Solicitudes Pendientes<span></span></th>
+           <th>Ver solicitudes</th>
+         </tr>
+         <tr ng-repeat="datos in vm.tablaSolicitudesVerAsignadas">
+           <td ng-bind="datos.zona" class="tdright"></td>
+           <td ng-bind="datos.sucursal" class="tdright"></td>
+           <td ng-bind="datos.vendedor"></td>
+           <td ng-bind="datos.solicitudesPendientes" class="tdright"></td>
+           <td><span class="ver-solicitudes"></span></td>
+         </tr>
+      </table>
+      <div class="paginador-generico">
+        <span class="pag-anterior"></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="pag-siguiente"></span>
+      </div>
+  	</div>
+    <div class="clear"></div>
+  </div>
+</div>

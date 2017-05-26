@@ -1,0 +1,136 @@
+<div class="seccion-supervisores" ng-controller="supervisorCtrl as vm">
+<!--Menu de usuario-->
+  <div class="contenedor-header">
+    <header class="menu-supervisor"><h2>Tablero Supervisor</h2></header>
+  </div>
+
+  <div class="estructura-menu-contenido">
+    <!--Menu lateral Izquierdo-->
+    <menu-lateral index="{ nro:4 }" opcion="{ nro:5 }" class="contenido-menu"></menu-lateral>
+  	<!--Contenido de la seccion mascaras-->
+  	<div class="contenido-derecho">
+      <!--Panel de filtros-->
+      <div class="panel-filtros-generico">
+  	    <h2 class="titulo-seccion">Preevaluaciones asignadas</h2>
+  	    <div class="filtro">
+          <div class="boton-filtro" ng-click="vm.toggleFiltro()">
+            <span></span>
+            <span>Filtrar<span>
+          </div>
+        </div>
+        <div class="clear"></div>
+  	  </div>
+      <!--Filtro activado -->
+      <div class="panel-filtros" ng-if="vm.filtroActivo">
+        <div class="close-filtro" ng-click="vm.toggleFiltro()"></div>
+        <div class="filtro-interno">
+          <p>Zona</p>
+          <select>
+            <option value="">Todas</option>
+            <option value="">Ramos Mejia</option>
+            <option value="">Desde</option>
+          </select>
+        </div>
+        <div class="filtro-interno">
+          <p>Sucursal</p>
+          <select>
+            <option value="">Todas</option>
+            <option value="">Ramos Mejia</option>
+            <option value="">Desde</option>
+          </select>
+        </div>
+        <div class="filtro-interno">
+          <p>CUIT empresa</p>
+          <div class="bloque-buscador">
+            <div class="buscador">
+              <span></span>
+              <input type="text" placeholder="Buscar" />
+            </div>
+          </div>
+        </div>
+        <div class="filtro-interno">
+          <p>Fecha de Alta</p>
+          <select>
+            <option value="">Desde</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+          <select>
+            <option value="">Hasta</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="clear"></div>
+        <div>
+          <div class="filtro-interno">
+            <p>Vendedor</p>
+            <select>
+              <option value="">Todos</option>
+              <option value="">Activa</option>
+              <option value="">Desactivado</option>
+            </select>
+          </div>
+          <div class="filtro-interno">
+            <p>Suscriptor</p>
+            <div class="bloque-buscador">
+              <div class="buscador">
+                <span></span>
+                <input type="text" placeholder="Ingresar" />
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!--Tabla con el contenido de preevaluaciones asignadas -->
+      <table class="tabla-generica datos-asignadas">
+         <tr>
+           <th>Zona<span></span></th>
+           <th>Sucursal<span></span></th>
+           <th>Empresa<span></span></th>
+           <th>Suscriptor<span></span></th>
+           <th>CUIT<span></span></th>
+           <th>Cant. altas<span></span></th>
+           <th>Fecha alta<span></span></th>
+           <th>Vendedor<span></span></th>
+           <th>Ver solicitudes<span></span></th>
+         </tr>
+         <tr ng-repeat="datos in vm.tablaPreevaluacionesAsignadas">
+           <td ng-bind="datos.zona" class="tdright"></td>
+           <td ng-bind="datos.sucursal" class="tdright"></td>
+           <td ng-bind="datos.empresa"></td>
+           <td ng-bind="datos.suscriptor" class="tdright"></td>
+           <td ng-bind="datos.cuit" class="tdright"></td>
+           <td ng-bind="datos.altas" class="tdright"></td>
+           <td ng-bind="datos.fechaAlta" class="tdright"></td>
+           <td ng-bind="datos.vendedor"></td>
+           <td><span class="ver-solicitudes"></span></td>
+         </tr>
+      </table>
+      <div class="paginador-generico">
+        <span class="pag-anterior"></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="pag-siguiente"></span>
+      </div>
+      <hr />
+      <div class="bloque-reasignar">
+        <h3>Reasignar</h3>
+        <div class="bloque-buscador">
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Nombre del vendedor" />
+          </div>
+        </div>
+        <button class="boton-rojo-solo">Reasignar</button>
+      </div>
+      <div class="botonera">
+        <button class="boton-claro boton-con-flechita">volver</button>
+      </div>
+  	</div>
+    <div class="clear"></div>
+  </div>
+</div>

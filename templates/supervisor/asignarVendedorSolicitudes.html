@@ -1,0 +1,111 @@
+<div class="seccion-supervisores seccion-detalles" ng-controller="supervisorCtrl as vm">
+<!--Menu de usuario-->
+  <div class="contenedor-header">
+    <header class="menu-supervisor">
+      <h2 class="ajuste-titulo">Tablero Supervisor</h2>
+      <div class="datos-header">
+        <div class="opciones">
+          <div>
+            <p>Zona</p>
+            <p>9</p>
+          </div>
+          <div>
+            <p>Sucursal</p>
+            <p>201</p>
+          </div>
+          <div>
+            <p>Empresa</p>
+            <p>Avon</p>
+          </div>
+          <div>
+            <p>Suscriptor</p>
+            <p>34321453</p>
+          </div>
+          <div>
+            <p>Cantidad altas</p>
+            <p>9</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="estructura-menu-contenido contenido-asignar-vendedores">
+    <!--Panel de filtros-->
+    <div class="panel-filtros-generico">
+	    <h2 class="titulo-seccion">Solicitudes</h2>
+	    <div class="filtro">
+        <div class="boton-filtro" ng-click="vm.toggleFiltro()">
+          <span></span>
+          <span>Filtrar<span>
+        </div>
+      </div>
+      <div class="clear"></div>
+	  </div>
+    <!--Filtro activado -->
+    <div class="panel-filtros" ng-if="vm.filtroActivo">
+      <div class="close-filtro" ng-click="vm.toggleFiltro()"></div>
+      <div class="filtro-interno filtros-activos">
+        <p>Solicitudes</p>
+        <div class="contenidos-filtrados">
+          <span class="filtro-seleccionado">Todas las solicitudes (xxx)</span>
+          <span>Asignadas (xxx)</span>
+          <span>Sin asignar (xxx)</span>
+        </div>
+      </div>
+      <div class="filtro-interno">
+        <p>CUIT empresa</p>
+        <div class="bloque-buscador">
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Buscar" />
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <!--Tabla con el contenido de Asignar vendedores -->
+    <table class="tabla-generica datos-asigna-vendedor">
+      <tr>
+       <th><input type="checkbox" name="checkAll" id="checkAll" /></th>
+       <th>Nombre<span></span></th>
+       <th>Apellido<span></span></th>
+       <th>CUIT<span></span></th>
+       <th>Producto<span></span></th>
+       <th>Fecha alta<span></span></th>
+       <th>Estado<span></span></th>
+      </tr>
+      <tr ng-repeat="datos in vm.tablaSolicitudesAsignadarVendedores">
+       <td><input type="checkbox" name="check-{{datos.cuit}}" id="check-{{datos.cuit}}" /></td>
+       <td ng-bind="datos.nombre"></td>
+       <td ng-bind="datos.apellido"></td>
+       <td ng-bind="datos.cuit" class="tdright"></td>
+       <td ng-bind="datos.producto"></td>
+       <td ng-bind="datos.fechaAlta" class="tdright"></td>
+       <td ng-bind="datos.estado"></td>
+      </tr>
+    </table>
+    <div class="paginador-generico">
+      <span class="pag-anterior"></span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span class="pag-siguiente"></span>
+    </div>
+    <hr />
+    <div class="bloque-reasignar">
+      <h3>Asignar</h3>
+      <div class="bloque-buscador">
+        <div class="buscador">
+          <span></span>
+          <input type="text" placeholder="Nombre del vendedor" />
+        </div>
+      </div>
+      <button class="boton-rojo-solo">Asignar</button>
+    </div>
+    <div class="link-descarga left"><a href="#/supervisor/asignarVendedorSolicitudes">Descargue la información a su PC</a></div>
+    <button class="boton-claro boton-con-flechita right">volver</button>
+    <div class="clear"></div>
+  </div>
+</div>

@@ -3,7 +3,8 @@ app.directive('menuLateral', function() {
     restrict : 'AE',
     templateUrl: '../templates/menuLateral.html',
     scope : {
-      posicion : "=index"
+      posicion : "=index",
+      interna : "=opcion"
     }
   };
 });

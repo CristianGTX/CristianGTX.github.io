@@ -73,6 +73,34 @@ app.config(function($routeProvider,$locationProvider){
         templateUrl: "templates/negociosDetalles.html",
         controller: "negociosDetallesCtrl as vm"
       })
+			.when("/supervisor/asignadasPreevaluaciones", {
+        templateUrl: "templates/supervisor/asignadasPreevaluaciones.html",
+        controller: "supervisorCtrl as vm"
+      })
+			.when("/supervisor/sinAsignarPreevaluaciones", {
+				templateUrl: "templates/supervisor/sinAsignarPreevaluaciones.html",
+				controller: "supervisorCtrl as vm"
+			})
+      .when("/supervisor/asignadasSolicitudes", {
+				templateUrl: "templates/supervisor/asignadasSolicitudes.html",
+				controller: "supervisorCtrl as vm"
+			})
+      .when("/supervisor/sinAsignarSolicitudes", {
+        templateUrl: "templates/supervisor/sinAsignarSolicitudes.html",
+        controller: "supervisorCtrl as vm"
+      })
+			.when("/supervisor/verAsignacionesSolicitudes", {
+        templateUrl: "templates/supervisor/verAsignacionesSolicitudes.html",
+        controller: "supervisorCtrl as vm"
+      })
+			.when("/supervisor/asignarVendedorSolicitudes", {
+				templateUrl: "templates/supervisor/asignarVendedorSolicitudes.html",
+				controller: "supervisorCtrl as vm"
+			})
+			.when("/supervisor/reasignarVendedorSolicitudes", {
+				templateUrl: "templates/supervisor/reasignarVendedorSolicitudes.html",
+				controller: "supervisorCtrl as vm"
+			})
       .when("/reportes", {
         templateUrl: "templates/reportes.html",
         controller: "reportesCtrl as vm"

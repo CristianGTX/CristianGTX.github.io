@@ -19,6 +19,7 @@
 }
 
 .sidebar-izquierdo ul li {
+  position: relative;
   margin: 0;
   border-bottom: solid 1px #CCCCCC;
   color: #777777;
@@ -37,4 +38,59 @@
 .sidebar-izquierdo ul li:hover, .item-seleccionado {
   background: #EBEBEB;
   color: #333333;
+}
+
+.sidebar-izquierdo .subOpciones {
+  padding-left: 20px;
+}
+
+.sidebar-izquierdo .subOpcionesInternas {
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sidebar-izquierdo .subOpcionesInternas > a {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.sidebar-izquierdo .subOpcionesInternas > a:hover {
+  color: #EC0000;
+}
+
+.sidebar-izquierdo .subOpcionesInternas:hover {
+  background: transparent;
+}
+
+.sidebar-izquierdo .subOpciones > a {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.sidebar-izquierdo .seleccionada {
+  color: #EC0000;
+}
+
+.sidebar-izquierdo .opcActiva {
+  font-family: 'open_sansbold';
+}
+
+.sidebar-izquierdo .flechita-sub-menu {
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  background-image: url(../img/sprite.png);
+  background-position: -2px -40px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  width: 14px;
+  height: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sidebar-izquierdo .flechita-sub-menu-abierta {
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
 }

@@ -97,15 +97,13 @@ input[type="text"] {
 .estructura-menu-contenido {
   width: 1024px;
   margin: auto;
-}
-
-.estructura-menu-contenido > div{
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .contenido-derecho {
   float: left;
   width: 740px;
+  padding-top: 20px;
 }
 
 /* ===CONTENIDO DE FILTROS=== */
@@ -113,6 +111,7 @@ input[type="text"] {
 .panel-filtros-generico {
   line-height: 30px;
   height: 30px;
+  margin-top: 20px;
 }
 
 h2.titulo-seccion {
@@ -199,6 +198,24 @@ h2.titulo-seccion {
   height: 22px;
 }
 
+.filtros-activos .contenidos-filtrados {
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.filtros-activos .contenidos-filtrados > span {
+  background: #999999;
+  color: #FFFFFF;
+  padding: 2px 10px;
+  margin-right: 10px;
+  font-size: 10px;
+  border-radius: 15px;
+}
+
+.filtros-activos .contenidos-filtrados > span.filtro-seleccionado {
+  background: #666666;
+}
+
 .panel-filtros .filtro-interno {
   float: left;
   margin-right: 20px;
@@ -220,6 +237,21 @@ h2.titulo-seccion {
   text-decoration: underline;
 }
 
+/*Ajuste de columnas en tablas */
+
+.tabla-generica td.tdright {
+  text-align: right;
+}
+
+.tabla-generica td.tdcentrado {
+  text-align: center;
+}
+
+.datos-asigna-vendedor td:first-child {
+  width: 30px;
+  text-align: center;
+}
+
 
 /*== INPUT BUSCADOR ==*/
 
@@ -237,7 +269,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 40px 0px;
+  background-position: 68px 0px;
   width: 14px;
   height: 14px;
 }
@@ -270,7 +302,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 72px 20px;
+  background-position: 100px 20px;
   width: 12px;
   height: 12px;
   margin-left: 6px;
@@ -294,19 +326,19 @@ h2.titulo-seccion {
   font-weight: 600;
 }
 
-/* AJUSTES PARA TABLA DE MASCARA */
-.datos-mascara td:nth-child(2), td:nth-child(6), td:nth-child(7) {
-  text-align: right;
+.ver-solicitudes {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/sprite-2.png);
+  background-position: 48px 0px;
+  width: 20px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
 }
 
-/* AJUSTES PARA TABLA DE SUSCRIPTORES */
-.datos-suscriptores td:nth-child(3), td:nth-child(4) {
-  text-align: right;
-}
-
-/* AJUSTES PARA TABLA DE ENTIDADES Y NEGOCIOS */
-.datos-entidades td:nth-child(2), td:nth-child(3), td:nth-child(4), .datos-negocios td:nth-child(2), td:nth-child(3), td:nth-child(4){
-  text-align: right;
+.datos-solicitudes-ver-asignadas .ver-solicitudes {
+  background-position: 22px 22px;
 }
 
 /* AJUSTES PARA SUCURSALES */
@@ -319,16 +351,12 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 135px 20px;
+  background-position: 190px 22px;
   width: 20px;
   height: 22px;
   margin-left: 10px;
   border: none;
   cursor: pointer;
-}
-
-.datos-sucursales td:nth-child(1), td:nth-child(3), td:nth-child(4) {
-  text-align: right;
 }
 
 /* AJUSTES PARA REPORTES */
@@ -375,7 +403,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 88px 20px;
+  background-position: 114px 20px;
   width: 10px;
   height: 20px;
   right: 4px;
@@ -409,7 +437,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 116px 20px;
+  background-position: 0 20px;
   width: 10px;
   margin-right: 10px;
   border: none;
@@ -419,7 +447,7 @@ h2.titulo-seccion {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 104px 20px;
+  background-position: 132px 20px;
   width: 10px;
   margin-left: 10px;
   border: none;
@@ -428,13 +456,13 @@ h2.titulo-seccion {
 .paginador-generico span.pag-anterior:hover {
   background: none;
   background-image: url(../img/sprite-2.png);
-  background-position: 116px 20px;
+  background-position: 0 20px;
 }
 
 .paginador-generico span.pag-siguiente:hover {
   background: none;
   background-image: url(../img/sprite-2.png);
-  background-position: 104px 20px;
+  background-position: 132px 20px;
 }
 
 /* == Titulo de contenidos == */
@@ -449,7 +477,7 @@ h2.titulo-contenido > span {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite-2.png);
-  background-position: 104px 20px;
+  background-position: 132px 20px;
   width: 10px;
   height: 20px;
   margin-right: 10px;
@@ -551,6 +579,10 @@ h2.con-flecha > span{
 
 .botonera > button {
   margin-left: 10px;
+}
+
+button.boton-espacio {
+  margin-right: 20px;
 }
 
 .centrar-boton {
@@ -1065,12 +1097,11 @@ span.opcion-no {
 .opciones-nuevo .select-domicilio > span:nth-child(2) {
   display: inline-block;
   vertical-align: middle;
-  background-image: url(../img/sprite-2.png);
-  background-position: 72px 14px;
-  width: 12px;
-  height: 11px;
-  margin-left: 6px;
-  margin-top: 2px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -36px;
+  width: 18px;
+  height: 14px;
+  margin-top: -2px;
   float: right;
   cursor: pointer;
 }
@@ -1121,8 +1152,44 @@ span.opcion-no {
   padding-left: 21px;
 }
 
-.solapa-ubicacion > div > input[type="radio"]{
+.solapa-ubicacion > div > input[type="radio"] {
   margin-right: 5px;
+}
+
+/*==PREEVALUACIONES ASIGNADAS==*/
+.seccion-supervisores .paginador-generico {
+  margin-bottom: 20px;
+}
+
+.bloque-reasignar {
+  margin: 20px 0;
+}
+
+.bloque-reasignar > h3 {
+  font-size: 16px;
+  font-family: 'open_sanssemibold';
+  margin-bottom: 20px;
+}
+
+.bloque-reasignar .bloque-buscador {
+  float: left;
+  margin-top: 3px;
+  margin-right: 20px;
+}
+
+.bloque-reasignar .buscador {
+  width: 260px;
+}
+
+.bloque-reasignar .buscador > input {
+  width: 230px;
+}
+
+/* == ASIGNAR VENDEDORES == */
+
+.contenido-asignar-vendedores {
+  width: 984px;
+  padding: 20px;
 }
 
 /*== SUSCRIPTORES DETALLES ==*/
@@ -1162,6 +1229,10 @@ span.opcion-no {
   line-height: 20px;
   min-width: 120px;
   margin-top: 20px;
+}
+
+.seccion-detalles .datos-header .opciones > div.clear {
+  float: none;
 }
 
 .seccion-detalles .datos-header .opciones > div p:first-child {
@@ -1245,7 +1316,7 @@ span.busca-mapa {
   width: 16px;
   height: 21px;
   background-image: url(../img/sprite-2.png);
-  background-position: 40px 21px;
+  background-position: 68px 21px;
   cursor: pointer;
 }
 
@@ -1281,6 +1352,27 @@ span.busca-mapa {
 
 .contenido-detalle .contenedor-detalle > div {
   padding: 20px 100px;
+}
+
+/*==MENU SUPERVISOR ==*/
+
+.menu-supervisor {
+  width: 1024px;
+  margin: auto;
+  background: #EBEBEB;
+}
+
+.menu-supervisor > h2 {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.menu-supervisor > h2.ajuste-titulo {
+  padding: 0;
+}
+
+.menu-supervisor > .datos-header {
+  padding: 0;
 }
 
 /* == TABLA CON SWICH == */

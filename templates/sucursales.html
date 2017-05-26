@@ -30,10 +30,10 @@
          <th>Longitud<span></span></th>
        </tr>
        <tr ng-repeat="datos in vm.tablaSucursales">
-         <td ng-bind="datos.numero"></td>
+         <td ng-bind="datos.numero" class="tdright"></td>
          <td ng-bind="datos.nombre"></td>
-         <td>{{datos.latitud}}<span></span></td>
-         <td>{{datos.longitud}}<span></span></td>
+         <td class="tdright">{{datos.latitud}}<span></span></td>
+         <td class="tdright">{{datos.longitud}}<span></span></td>
        </tr>
     </table>
     <div class="paginador-generico">

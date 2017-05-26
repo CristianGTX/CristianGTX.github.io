@@ -103,11 +103,11 @@
        <tr ng-repeat="datos in vm.tablaReportes">
          <td><input type="checkbox" name="check-{{datos.suscriptor}}" id="check-{{datos.suscriptor}}" /></td>
          <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.mascara"></td>
-         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.cuit"></td>
-         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.lote"></td>
-         <td ng-class="{'ajuste-tabla':vm.tipoReporte !== 'general'}" ng-bind="datos.fechaAlta"></td>
-         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.suscriptor"></td>
-         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.capitas"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.cuit" class="tdright"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.lote" class="tdright"></td>
+         <td ng-class="{'ajuste-tabla':vm.tipoReporte !== 'general'}" ng-bind="datos.fechaAlta" class="tdright"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.suscriptor" class="tdright"></td>
+         <td ng-show="vm.tipoReporte === 'general'" ng-bind="datos.capitas" class="tdright"></td>
        </tr>
     </table>
     <div class="paginador-generico">

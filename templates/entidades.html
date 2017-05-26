@@ -80,10 +80,10 @@
          </tr>
          <tr ng-repeat="datos in vm.tablaEntidades">
            <td ng-bind="datos.entidad"></td>
-           <td ng-bind="datos.cuit"></td>
-           <td ng-bind="datos.fechaAlta"></td>
-           <td ng-bind="datos.fechaBaja"></td>
-           <td ng-bind="datos.suscriptores"></td>
+           <td ng-bind="datos.cuit" class="tdright"></td>
+           <td ng-bind="datos.fechaAlta" class="tdright"></td>
+           <td ng-bind="datos.fechaBaja" class="tdright"></td>
+           <td ng-bind="datos.suscriptores" class="tdright"></td>
            <td>
              <span ng-class="{'activo' : datos.estado === 'Activo', 'inhabilitado' : datos.estado === 'Inhabilitado' }">{{datos.estado}}</span>
              <span class="boton-tres-puntitos" ng-click="vm.abreOpciones($index)"></span>

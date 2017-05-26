@@ -91,11 +91,11 @@
          </tr>
          <tr ng-repeat="datos in vm.tablaMascara">
            <td ng-bind="datos.mascara"></td>
-           <td ng-bind="datos.prioridad"></td>
+           <td ng-bind="datos.prioridad" class="tdright"></td>
            <td ng-bind="datos.visibilidad"></td>
            <td ng-bind="datos.asignada"></td>
            <td ng-bind="datos.estado" ng-class="{'activo' : datos.estado === 'Activo', 'inhabilitado' : datos.estado === 'Inhabilitado' }"></td>
-           <td ng-bind="datos.fechaAlta"></td>
+           <td ng-bind="datos.fechaAlta" class="tdright"></td>
            <td>
              <span>{{datos.fechaBaja}}</span>
              <span class="boton-tres-puntitos" ng-click="vm.abreOpciones($index)"></span>

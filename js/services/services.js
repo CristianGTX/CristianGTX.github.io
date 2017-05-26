@@ -46,6 +46,360 @@ app.service('misLotes', function() {
         ]
     };
 
+    vm.datosPreevaluacionesAsignadas = function() {
+        return [
+          {
+              id : 0,
+              zona : 201,
+              sucursal : 201,
+              empresa: "Avon",
+              suscriptor: "15685215",
+              cuit: "32-12345687-0",
+              altas:"100",
+              fechaAlta:"20/02/2017",
+              vendedor:"Juan Perez",
+              verSolicitudes: true
+          },
+          {
+              id : 1,
+              zona : 1,
+              sucursal : 1,
+              empresa: "Avon",
+              suscriptor: "15685215",
+              cuit: "32-12345687-0",
+              altas:"45",
+              fechaAlta:"20/02/2017",
+              vendedor:"Mariano Costas",
+              verSolicitudes: true
+          },
+          {
+              id : 2,
+              zona : 2,
+              sucursal : 2,
+              empresa: "Garbarino",
+              suscriptor: "35489635",
+              cuit: "32-12345687-0",
+              altas:"577",
+              fechaAlta:"20/02/2017",
+              vendedor:"Clarisa Nuñez",
+              verSolicitudes: true
+          },
+          {
+              id : 3,
+              zona : 3,
+              sucursal : 3,
+              empresa: "Frávega",
+              suscriptor: "75896489",
+              cuit: "32-12345687-0",
+              altas:"100",
+              fechaAlta:"20/02/2017",
+              vendedor:"Emiliano Suárez",
+              verSolicitudes: true
+          },
+          {
+              id : 4,
+              zona : 4,
+              sucursal : 4,
+              empresa: "Farmacity",
+              suscriptor: "325897613",
+              cuit: "32-12345687-0",
+              altas:"1000",
+              fechaAlta:"20/02/2017",
+              vendedor:"José Rodriguez",
+              verSolicitudes: true
+          }
+        ]
+    };
+
+    vm.datosSolicitudesAsignadas = function() {
+        return [
+          {
+              id : 0,
+              zona : 201,
+              sucursal : 201,
+              empresa: "Avon",
+              suscriptor: "15685215",
+              cuit: "32-12345687-0",
+              altas:"100",
+              fechaAlta:"20/02/2017",
+              vendedor:"Juan Perez",
+              verSolicitudes: true
+          },
+          {
+              id : 1,
+              zona : 1,
+              sucursal : 1,
+              empresa: "Avon",
+              suscriptor: "15685215",
+              cuit: "32-12345687-0",
+              altas:"45",
+              fechaAlta:"20/02/2017",
+              vendedor:"Mariano Costas",
+              verSolicitudes: true
+          },
+          {
+              id : 2,
+              zona : 2,
+              sucursal : 2,
+              empresa: "Garbarino",
+              suscriptor: "35489635",
+              cuit: "32-12345687-0",
+              altas:"577",
+              fechaAlta:"20/02/2017",
+              vendedor:"Clarisa Nuñez",
+              verSolicitudes: true
+          },
+          {
+              id : 3,
+              zona : 3,
+              sucursal : 3,
+              empresa: "Frávega",
+              suscriptor: "75896489",
+              cuit: "32-12345687-0",
+              altas:"100",
+              fechaAlta:"20/02/2017",
+              vendedor:"Emiliano Suárez",
+              verSolicitudes: true
+          },
+          {
+              id : 4,
+              zona : 4,
+              sucursal : 4,
+              empresa: "Farmacity",
+              suscriptor: "325897613",
+              cuit: "32-12345687-0",
+              altas:"1000",
+              fechaAlta:"20/02/2017",
+              vendedor:"José Rodriguez",
+              verSolicitudes: true
+          }
+        ]
+    };
+
+    vm.datosSolicitudesSinAsignar = function() {
+        return [
+          {
+              id : 0,
+              zona : 201,
+              sucursal : 201,
+              empresa: "Avon",
+              suscriptor: "15685215",
+              cuit: "32-12345687-0",
+              altas:"100",
+              fechaAlta:"20/02/2017",
+              verSolicitudes: true
+          },
+          {
+              id : 1,
+              zona : 1,
+              sucursal : 1,
+              empresa: "Avon",
+              suscriptor: "15685215",
+              cuit: "32-12345687-0",
+              altas:"45",
+              fechaAlta:"20/02/2017",
+              verSolicitudes: true
+          },
+          {
+              id : 2,
+              zona : 2,
+              sucursal : 2,
+              empresa: "Garbarino",
+              suscriptor: "35489635",
+              cuit: "32-12345687-0",
+              altas:"577",
+              fechaAlta:"20/02/2017",
+              verSolicitudes: true
+          },
+          {
+              id : 3,
+              zona : 3,
+              sucursal : 3,
+              empresa: "Frávega",
+              suscriptor: "75896489",
+              cuit: "32-12345687-0",
+              altas:"100",
+              fechaAlta:"20/02/2017",
+              verSolicitudes: true
+          },
+          {
+              id : 4,
+              zona : 4,
+              sucursal : 4,
+              empresa: "Farmacity",
+              suscriptor: "325897613",
+              cuit: "32-12345687-0",
+              altas:"1000",
+              fechaAlta:"20/02/2017",
+              verSolicitudes: true
+          }
+        ]
+    };
+
+    vm.datosSolicitudesAsignadarVendedores = function() {
+      return [
+        {
+          id : 0,
+          nombre : "Luciano",
+          apellido : "Rias",
+          cuit: "32-32165478-9",
+          producto: "Sueldo",
+          fechaAlta:"20/02/2017",
+          estado:"Sin asignar"
+        },
+        {
+          id : 1,
+          nombre : "Veronica",
+          apellido : "Lozano",
+          cuit: "32-32165478-9",
+          producto: "Honorarios",
+          fechaAlta:"20/02/2017",
+          estado:"Sin asignar"
+        },
+        {
+          id : 2,
+          nombre : "Mariana",
+          apellido : "Gonzalez",
+          cuit: "32-32165478-9",
+          producto: "Sueldo",
+          fechaAlta:"20/02/2017",
+          estado:"Sin asignar"
+        },
+        {
+          id : 3,
+          nombre : "Laura",
+          apellido : "Diaz",
+          cuit: "32-32165478-9",
+          producto: "Credencia s/cta",
+          fechaAlta:"20/02/2017",
+          estado:"Sin asignar"
+        },
+        {
+          id : 4,
+          nombre : "Carolina",
+          apellido : "Paez",
+          cuit: "32-32165478-9",
+          producto: "Sueldo",
+          fechaAlta:"20/02/2017",
+          estado:"Sin asignar"
+        },
+        {
+          id : 5,
+          nombre : "Federico",
+          apellido : "Garcia",
+          cuit: "32-32165478-9",
+          producto: "Honorarios",
+          fechaAlta:"20/02/2017",
+          estado:"Sin asignar"
+        }
+      ]
+    }
+
+    vm.datosPreevaluacionesSinAsignar = function() {
+      return [
+        {
+            id : 0,
+            zona : 201,
+            sucursal : 201,
+            empresa: "Avon",
+            suscriptor: "15685215",
+            cuit: "32-12345687-0",
+            altas:"100",
+            fechaAlta:"20/02/2017",
+            verSolicitudes: true
+        },
+        {
+            id : 1,
+            zona : 1,
+            sucursal : 1,
+            empresa: "Avon",
+            suscriptor: "15685215",
+            cuit: "32-12345687-0",
+            altas:"45",
+            fechaAlta:"20/02/2017",
+            verSolicitudes: true
+        },
+        {
+            id : 2,
+            zona : 2,
+            sucursal : 2,
+            empresa: "Garbarino",
+            suscriptor: "35489635",
+            cuit: "32-12345687-0",
+            altas:"577",
+            fechaAlta:"20/02/2017",
+            verSolicitudes: true
+        },
+        {
+            id : 3,
+            zona : 3,
+            sucursal : 3,
+            empresa: "Frávega",
+            suscriptor: "75896489",
+            cuit: "32-12345687-0",
+            altas:"100",
+            fechaAlta:"20/02/2017",
+            verSolicitudes: true
+        },
+        {
+            id : 4,
+            zona : 4,
+            sucursal : 4,
+            empresa: "Farmacity",
+            suscriptor: "325897613",
+            cuit: "32-12345687-0",
+            altas:"1000",
+            fechaAlta:"20/02/2017",
+            verSolicitudes: true
+        }
+      ]
+    };
+
+    vm.datosSolicitudesVerAsignadas = function() {
+        return [
+          {
+              id : 0,
+              zona : 201,
+              sucursal : 201,
+              vendedor:"Ramiro Costas",
+              solicitudesPendientes: 100,
+              verSolicitudes: true
+          },
+          {
+              id : 1,
+              zona : 1,
+              sucursal : 1,
+              vendedor:"Mariano Costas",
+              solicitudesPendientes: 45,
+              verSolicitudes: true
+          },
+          {
+              id : 2,
+              zona : 2,
+              sucursal : 2,
+              vendedor:"Clarisa Nuñez",
+              solicitudesPendientes: 577,
+              verSolicitudes: true
+          },
+          {
+              id : 3,
+              zona : 3,
+              sucursal : 3,
+              vendedor:"Emiliano Suárez",
+              solicitudesPendientes: 100,
+              verSolicitudes: true
+          },
+          {
+              id : 4,
+              zona : 4,
+              sucursal : 4,
+              vendedor:"José Rodriguez",
+              solicitudesPendientes: 1000,
+              verSolicitudes: true
+          }
+        ]
+    };
+
     vm.datosLotesReportes = function() {
         return [
           {
@@ -379,4 +733,43 @@ app.service('misLotes', function() {
           }
         ]
     };
+
+    //SUBMENU DE SUPERVISORES
+    vm.subSupervisor  = function(){
+        return [
+        {
+          titulo: 'Solicitudes',
+          link: '#/solicitudes',
+          subopciones: [
+            {
+              titulo: 'Sin asignar',
+              link: '#/entidades'
+            },
+            {
+              titulo: 'Asignadas',
+              link: '#/suscriptores'
+            },
+            {
+              titulo: 'Ver asignaciones',
+              link: '#/suscriptores'
+            }
+          ]
+        },
+        {
+          titulo: 'Preevalucaiones',
+          link: '#/preevaluaciones',
+          subopciones: [
+            {
+              titulo: 'Sin asignar',
+              link: '#/entidades'
+            },
+            {
+              titulo: 'Asignadas',
+              link: '#/suscriptores'
+            }
+          ]
+        }
+      ]
+    };
+
 });

@@ -78,8 +78,8 @@
          </tr>
          <tr ng-repeat="datos in vm.tablaNegocios">
            <td ng-bind="datos.negocio"></td>
-           <td ng-bind="datos.entidades"></td>
-           <td ng-bind="datos.suscriptores"></td>
+           <td ng-bind="datos.entidades" class="tdright"></td>
+           <td ng-bind="datos.suscriptores" class="tdright"></td>
            <td>
              <span ng-class="{'activo' : datos.estado === 'Activo', 'inhabilitado' : datos.estado === 'Inhabilitado' }">{{datos.estado}}</span>
              <span class="boton-tres-puntitos" ng-click="vm.abreOpciones($index)"></span>
