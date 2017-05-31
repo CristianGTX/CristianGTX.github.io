@@ -3,6 +3,7 @@ app.directive('menuLateral', function() {
     restrict : 'AE',
     templateUrl: '../templates/menuLateral.html',
     scope : {
+      externa : "=tipo",
       posicion : "=index",
       interna : "=opcion"
     }

@@ -1,0 +1,83 @@
+<div class="seccion-vendedores seccion-detalles" ng-controller="vendedorCtrl as vm">
+<!--Menu de usuario-->
+  <div class="contenedor-header">
+    <header class="menu-supervisor">
+      <h2 class="ajuste-titulo">Tablero Supervisor</h2>
+    </header>
+  </div>
+  <div class="estructura-menu-contenido contenido-asignar-vendedores">
+    <!--Panel de filtros-->
+    <div class="panel-filtros-generico">
+	    <h2 class="titulo-seccion">Solicitudes</h2>
+	    <div class="filtro">
+        <div class="boton-filtro" ng-click="vm.toggleFiltro()">
+          <span></span>
+          <span>Filtrar<span>
+        </div>
+      </div>
+      <div class="clear"></div>
+	  </div>
+    <!--Filtro activado -->
+    <div class="panel-filtros" ng-if="vm.filtroActivo">
+      <div class="close-filtro" ng-click="vm.toggleFiltro()"></div>
+      <div class="filtro-interno">
+        <p>CUIT empresa</p>
+        <div class="bloque-buscador">
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Buscar" />
+          </div>
+        </div>
+      </div>
+      <div class="filtro-interno">
+        <p>Suscriptor</p>
+        <div class="bloque-buscador">
+          <div class="buscador">
+            <span></span>
+            <input type="text" placeholder="Ingresar" />
+          </div>
+        </div>
+      </div>
+      <div class="filtro-interno">
+        <p>Producto</p>
+        <select>
+          <option value="">Todos</option>
+          <option value="">Sueldo</option>
+          <option value="">Honorarios</option>
+          <option value="">Preevaluación</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <!--Tabla con el contenido de Asignar vendedores -->
+    <table class="tabla-generica vendedor-solicitudes">
+      <tr>
+       <th>Empresa<span></span></th>
+       <th>Suscriptor<span></span></th>
+       <th>CUIT<span></span></th>
+       <th>Producto<span></span></th>
+       <th>Cant. altas</th>
+       <th>Fecha Alta</th>
+       <th>Ver solicitudes</th>
+      </tr>
+      <tr ng-repeat="datos in vm.tablaVendedorGrupoSolicitudes">
+       <td ng-bind="datos.empresa"></td>
+       <td ng-bind="datos.suscriptor"></td>
+       <td ng-bind="datos.cuit" class="tdright"></td>
+       <td ng-bind="datos.producto"></td>
+       <td ng-bind="datos.altas"></td>
+       <td ng-bind="datos.fechaAlta"></td>
+       <td><span class="ver-solicitudes"></span></td>
+      </tr>
+    </table>
+    <div class="paginador-generico">
+      <span class="pag-anterior"></span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span class="pag-siguiente"></span>
+    </div>
+    <button class="boton-claro boton-con-flechita right">volver</button>
+  </div>
+</div>

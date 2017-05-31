@@ -1,4 +1,4 @@
-<div class="seccion-supervisores seccion-detalles" ng-controller="supervisorCtrl as vm">
+<div class="seccion-vendedores seccion-detalles" ng-controller="vendedorCtrl as vm">
 <!--Menu de usuario-->
   <div class="contenedor-header">
     <header class="menu-supervisor">
@@ -22,10 +22,6 @@
             <p>34321453</p>
           </div>
           <div>
-            <p>Cantidad altas</p>
-            <p>9</p>
-          </div>
-          <div>
             <p>Vendedor asignado</p>
             <p>Clarisa Nuñez</p>
           </div>
@@ -37,7 +33,7 @@
   <div class="estructura-menu-contenido contenido-asignar-vendedores">
     <!--Panel de filtros-->
     <div class="panel-filtros-generico">
-	    <h2 class="titulo-seccion">Solicitudes</h2>
+	    <h2 class="titulo-seccion">Solicitudes a tratar</h2>
 	    <div class="filtro">
         <div class="boton-filtro" ng-click="vm.toggleFiltro()">
           <span></span>
@@ -71,27 +67,23 @@
     </div>
 
     <!--Tabla con el contenido de Asignar vendedores -->
-    <table class="tabla-generica datos-asigna-vendedor">
+    <table class="tabla-generica vendedor-solicitudes">
       <tr>
-       <th><input type="checkbox" name="checkAll" id="checkAll" /></th>
        <th>Nombre<span></span></th>
        <th>Apellido<span></span></th>
        <th>CUIT<span></span></th>
        <th>Producto<span></span></th>
-       <th>Fecha alta<span></span></th>
        <th>Solicitud</th>
        <th>Pin</th>
        <th>Preembolzado</th>
        <th>Sucursal</th>
        <th>Estado<span></span></th>
       </tr>
-      <tr ng-repeat="datos in vm.tablaSolicitudesAsignadasVendedores">
-       <td><input type="checkbox" name="check-{{datos.cuit}}" id="check-{{datos.cuit}}" /></td>
+      <tr ng-repeat="datos in vm.tablaVendedorSolicitudes">
        <td ng-bind="datos.nombre"></td>
        <td ng-bind="datos.apellido"></td>
        <td ng-bind="datos.cuit" class="tdright"></td>
        <td ng-bind="datos.producto"></td>
-       <td ng-bind="datos.fechaAlta" class="tdright"></td>
        <td><input type="checkbox" name="solicitud-{{datos.cuit}}" id="solicitud-{{datos.cuit}}"></td>
        <td class="tdcentrado"><input type="checkbox" name="pin-{{datos.cuit}}" id="pin-{{datos.cuit}}"></td>
        <td><input type="checkbox" name="preembolzado-{{datos.cuit}}" id="preembolzado-{{datos.cuit}}"></td>
@@ -106,20 +98,9 @@
       <span>3</span>
       <span class="pag-siguiente"></span>
     </div>
-    <hr />
-    <div class="bloque-reasignar">
-      <h3>Reasignar</h3>
-      <div class="bloque-buscador">
-        <div class="buscador">
-          <span></span>
-          <input type="text" placeholder="Nombre del vendedor" />
-        </div>
-      </div>
-      <button class="boton-rojo-solo">Resignar</button>
-    </div>
     <div class="link-descarga left"><a href="#/supervisor/asignarVendedorSolicitudes">Descargue la información a su PC</a></div>
     <button class="boton-claro boton-con-flechita right">volver</button>
-    <button class="boton-rojo right boton-espacio">Reclamar</button>
+    <button class="boton-rojo right boton-espacio">Guardar</button>
     <div class="clear"></div>
   </div>
 </div>

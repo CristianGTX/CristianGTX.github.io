@@ -1,7 +1,7 @@
 <!--Menu lateral Izquierdo-->
 <div class="sidebar-izquierdo" ng-controller="menuLateralCtrl as vm">
 	<ul>
-		<li ng-class="{'item-seleccionado':$index === vm.seleccionado}" ng-repeat="lista in vm.sidebarMenu">
+		<li ng-if="!vm.externo" ng-class="{'item-seleccionado':$index === vm.seleccionado}" ng-repeat="lista in vm.sidebarMenu">
 			<a ng-if="lista.titulo != 'Supervisor'" ng-href="{{lista.link}}">{{lista.titulo}}({{lista.cantidad}})</a>
       <a ng-if="lista.titulo == 'Supervisor'" ng-click="vm.cierraSupervisor()">{{lista.titulo}}<span ng-class="{'flechita-sub-menu-abierta':vm.verSubOpc}" class="flechita-sub-menu"><span></a>
 		</li>
@@ -10,16 +10,16 @@
       <a ng-class="{'opcActiva':vm.verSolicitudes}" ng-click="vm.abreSubOpcion('solicitudes');">Solicitudes<span ng-class="{'flechita-sub-menu-abierta':vm.verSolicitudes}" class="flechita-sub-menu"><span></a>
     </li>
     <li class="subOpcionesInternas" ng-if="vm.verSubOpc && vm.verSolicitudes">
-      <a ng-href="#/supervisor/sinAsignarSolicitudes/" ng-class="{'seleccionada':vm.subSeleccionado === 1}">• Sin asignar</a>
-      <a ng-href="#/supervisor/asignadasSolicitudes/" ng-href="#" ng-class="{'seleccionada':vm.subSeleccionado === 2}">• Asignadas</a>
-      <a ng-href="#/supervisor/verAsignacionesSolicitudes/" ng-href="#" ng-class="{'seleccionada':vm.subSeleccionado === 3}">• Ver asignaciones</a>
+      <a ng-href="#/supervisor/{{vm.externo ? 'externo/' : ''}}sinAsignarSolicitudes/" ng-class="{'seleccionada':vm.subSeleccionado === 1}">• Sin asignar</a>
+      <a ng-href="#/supervisor/{{vm.externo ? 'externo/' : ''}}asignadasSolicitudes/" ng-href="#" ng-class="{'seleccionada':vm.subSeleccionado === 2}">• Asignadas</a>
+      <a ng-href="#/supervisor/{{vm.externo ? 'externo/' : ''}}verAsignacionesSolicitudes/" ng-href="#" ng-class="{'seleccionada':vm.subSeleccionado === 3}">• Ver asignaciones</a>
     </li>
     <li class="subOpciones" ng-if="vm.verSubOpc">
       <a ng-class="{'opcActiva':vm.verPreevaluaciones}" ng-click="vm.abreSubOpcion('preevaluaciones');">Preevaluaciones<span ng-class="{'flechita-sub-menu-abierta':vm.verPreevaluaciones}" class="flechita-sub-menu"><span></a>
     </li>
     <li class="subOpcionesInternas" ng-if="vm.verSubOpc && vm.verPreevaluaciones">
-      <a ng-href="#/supervisor/sinAsignarPreevaluaciones/" ng-class="{'seleccionada':vm.subSeleccionado === 4}">• Sin asignar</a>
-      <a ng-href="#/supervisor/asignadasPreevaluaciones/" ng-class="{'seleccionada':vm.subSeleccionado === 5}">• Asignadas</a>
+      <a ng-href="#/supervisor/{{vm.externo ? 'externo/' : ''}}sinAsignarPreevaluaciones/" ng-class="{'seleccionada':vm.subSeleccionado === 4}">• Sin asignar</a>
+      <a ng-href="#/supervisor/{{vm.externo ? 'externo/' : ''}}asignadasPreevaluaciones/" ng-class="{'seleccionada':vm.subSeleccionado === 5}">• Asignadas</a>
     </li>
 	</ul>
 </div>

@@ -93,6 +93,26 @@ app.config(function($routeProvider,$locationProvider){
         templateUrl: "templates/supervisor/verAsignacionesSolicitudes.html",
         controller: "supervisorCtrl as vm"
       })
+			.when("/supervisor/externo/asignadasPreevaluaciones", {
+				templateUrl: "templates/supervisor/externo/asignadasPreevaluaciones.html",
+				controller: "supervisorCtrl as vm"
+			})
+			.when("/supervisor/externo/sinAsignarPreevaluaciones", {
+				templateUrl: "templates/supervisor/externo/sinAsignarPreevaluaciones.html",
+				controller: "supervisorCtrl as vm"
+			})
+			.when("/supervisor/externo/asignadasSolicitudes", {
+				templateUrl: "templates/supervisor/externo/asignadasSolicitudes.html",
+				controller: "supervisorCtrl as vm"
+			})
+			.when("/supervisor/externo/sinAsignarSolicitudes", {
+				templateUrl: "templates/supervisor/externo/sinAsignarSolicitudes.html",
+				controller: "supervisorCtrl as vm"
+			})
+			.when("/supervisor/externo/verAsignacionesSolicitudes", {
+				templateUrl: "templates/supervisor/externo/verAsignacionesSolicitudes.html",
+				controller: "supervisorCtrl as vm"
+			})
 			.when("/supervisor/asignarVendedorSolicitudes", {
 				templateUrl: "templates/supervisor/asignarVendedorSolicitudes.html",
 				controller: "supervisorCtrl as vm"
@@ -100,6 +120,14 @@ app.config(function($routeProvider,$locationProvider){
 			.when("/supervisor/reasignarVendedorSolicitudes", {
 				templateUrl: "templates/supervisor/reasignarVendedorSolicitudes.html",
 				controller: "supervisorCtrl as vm"
+			})
+			.when("/vendedorSolicitudes", {
+				templateUrl: "templates/vendedorSolicitudes.html",
+				controller: "vendedorCtrl as vm"
+			})
+			.when("/vendedorGrupoSolicitudes", {
+				templateUrl: "templates/vendedorGrupoSolicitudes.html",
+				controller: "vendedorCtrl as vm"
 			})
       .when("/reportes", {
         templateUrl: "templates/reportes.html",

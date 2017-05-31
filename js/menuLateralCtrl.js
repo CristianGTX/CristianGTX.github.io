@@ -2,7 +2,10 @@ app.controller('menuLateralCtrl', function($scope, misLotes){
   var vm = this;
   vm.verPreevaluaciones = false;
   vm.verSolicitudes = false;
+  vm.externo = false;
   vm.seleccionado = $scope.$parent.posicion.nro;
+
+  if ($scope.$parent.externa && $scope.$parent.externa.externo) vm.externo = true;
 
   // Verifico si tiene subociones y marco la seleccionada
   if ($scope.$parent.interna) {

@@ -9,7 +9,14 @@ app.controller("supervisorCtrl", function($scope, misLotes, $location){
   vm.tablaSolicitudesSinAsignar = misLotes.datosSolicitudesSinAsignar();
   vm.tablaPreevaluacionesSinAsignar = misLotes.datosPreevaluacionesSinAsignar();
   vm.tablaSolicitudesVerAsignadas = misLotes.datosSolicitudesVerAsignadas();
-  vm.tablaSolicitudesAsignadarVendedores = misLotes.datosSolicitudesAsignadarVendedores();
+  vm.tablaSolicitudesAsignadasVendedores = misLotes.datosSolicitudesAsignadasVendedores();
+
+  //Externas
+  vm.tablaPreevaluacionesAsignadasExt = misLotes.datosPreevaluacionesAsignadasExt();
+  vm.tablaSolicitudesAsignadasExt = misLotes.datosSolicitudesAsignadasExt();
+  vm.tablaSolicitudesSinAsignarExt = misLotes.datosSolicitudesSinAsignarExt();
+  vm.tablaPreevaluacionesSinAsignarExt = misLotes.datosPreevaluacionesSinAsignarExt();
+  vm.tablaSolicitudesVerAsignadasExt = misLotes.datosSolicitudesVerAsignadasExt();
 
   //Función para abrir el menu Adicional
   vm.abreOpciones = function(index) {
