@@ -35,6 +35,10 @@
   color: #777777;
 }
 
+.sidebar-izquierdo ul li.item-seleccionado > a {
+  font-family: 'open_sansbold';
+}
+
 .sidebar-izquierdo ul li:hover, .item-seleccionado {
   background: #EBEBEB;
   color: #333333;

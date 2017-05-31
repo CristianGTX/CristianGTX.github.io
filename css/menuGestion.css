@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.menu-gestion ul li:first-child {
+  border-left: solid 1px #CCCCCC;
+}
+
 .menu-gestion ul li:hover {
   background-color: #6F6F6F;
 	color: #FFFFFF;

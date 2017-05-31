@@ -35,10 +35,10 @@
   <div class="configuracion-mascaras">
     <h2 class="titulo-contenido"><span></span>Inicio :: Máscaras :: Nueva Mascara</h2>
     <!--PRODUCTO PRINCIPAL OFERTABLE -->
-    <div class="opciones-configuracion">
+    <div class="opciones-configuracion" ng-click="vm.abreProducto = !vm.abreProducto">
       <div><span ng-class="{'config-rojo':vm.abreProducto, 'config-verde':!vm.abreProducto}"></span> 1.Producto Principal Ofertable</div>
       <div>
-        <span class="editar" ng-class="{'editar-abierto':vm.abreProducto}" ng-click="vm.abreProducto = !vm.abreProducto"></span>
+        <span class="editar" ng-class="{'editar-abierto':vm.abreProducto}"></span>
       </div>
       <div class="clear"></div>
     </div>
@@ -188,10 +188,10 @@
         <button class="boton-rojo">Guardar y Continuar</button>
       </div>
     </div>
-    <div class="opciones-configuracion">
+    <div class="opciones-configuracion" ng-click="vm.abreUpgradeInicio()">
       <div><span ng-class="{'config-rojo':vm.abreUpgrade, 'config-verde':!vm.abreUpgrade}"></span> 2.Otros Productos / Upgrade</div>
       <div>
-        <span class="editar" ng-class="{'editar-abierto':vm.abreUpgrade}" ng-click="vm.abreUpgradeInicio()"></span>
+        <span class="editar" ng-class="{'editar-abierto':vm.abreUpgrade}"></span>
       </div>
       <div class="clear"></div>
     </div>
@@ -488,10 +488,10 @@
         <button class="boton-rojo">Guardar y Continuar</button>
       </div>
     </div>
-    <div class="opciones-configuracion">
+    <div class="opciones-configuracion" ng-click="vm.abreconfiguracion = !vm.abreconfiguracion">
       <div><span ng-class="{'config-rojo':vm.abreconfiguracion, 'config-verde':!vm.abreconfiguracion}"></span> 3.Configuración General</div>
       <div>
-        <span class="editar" ng-class="{'editar-abierto':vm.abreconfiguracion}" ng-click="vm.abreconfiguracion = !vm.abreconfiguracion"></span>
+        <span class="editar" ng-class="{'editar-abierto':vm.abreconfiguracion}"></span>
       </div>
       <div class="clear"></div>
     </div>

@@ -189,7 +189,7 @@ h2.titulo-seccion {
 .panel-filtros p {
   font-family: 'open_sanssemibold';
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .panel-filtros select {
@@ -618,6 +618,7 @@ button.boton-espacio {
   line-height: 40px;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .opciones-configuracion div > span:first-child {
@@ -1695,7 +1696,7 @@ h3.titulo-con-retorno {
   background: #EC0000;
   background: url(../img/bg_btn_01.png);
   color: #FFFFFF;
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;

@@ -2,7 +2,7 @@
 <div class="sidebar-izquierdo" ng-controller="menuLateralCtrl as vm">
 	<ul>
 		<li ng-if="!vm.externo" ng-class="{'item-seleccionado':$index === vm.seleccionado}" ng-repeat="lista in vm.sidebarMenu">
-			<a ng-if="lista.titulo != 'Supervisor'" ng-href="{{lista.link}}">{{lista.titulo}}({{lista.cantidad}})</a>
+			<a ng-if="lista.titulo != 'Supervisor'" ng-href="{{lista.link}}">{{lista.titulo}} ({{lista.cantidad}})</a>
       <a ng-if="lista.titulo == 'Supervisor'" ng-click="vm.cierraSupervisor()">{{lista.titulo}}<span ng-class="{'flechita-sub-menu-abierta':vm.verSubOpc}" class="flechita-sub-menu"><span></a>
 		</li>
     <!--Submeno de Supervisor -->
